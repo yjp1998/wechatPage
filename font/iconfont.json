@@ -1,0 +1,177 @@
+{
+  "id": "1954527",
+  "name": "微信",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "700813",
+      "name": "微信支付",
+      "font_class": "weixinzhifu",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "879168",
+      "name": "盒子full",
+      "font_class": "ego-boxfull",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "925316",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "8772246",
+      "name": "相册",
+      "font_class": "xiangce",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "16148733",
+      "name": "我的卡包",
+      "font_class": "wodeqiabao0101-copy",
+      "unicode": "eb49",
+      "unicode_decimal": 60233
+    },
+    {
+      "icon_id": "16148734",
+      "name": "二维码",
+      "font_class": "ico-copy",
+      "unicode": "eb4a",
+      "unicode_decimal": 60234
+    },
+    {
+      "icon_id": "16147645",
+      "name": "相机",
+      "font_class": "xiangji-copy",
+      "unicode": "eb48",
+      "unicode_decimal": 60232
+    },
+    {
+      "icon_id": "15710133",
+      "name": "添加好友",
+      "font_class": "tianjiahaoyou",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "2158298",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "8348138",
+      "name": "视频",
+      "font_class": "shipin",
+      "unicode": "e71f",
+      "unicode_decimal": 59167
+    },
+    {
+      "icon_id": "10487577",
+      "name": "游戏",
+      "font_class": "youxi",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "1638283",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "9186713",
+      "name": "朋友圈",
+      "font_class": "pengyouquan",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "436016",
+      "name": "语音",
+      "font_class": "yuyin",
+      "unicode": "e805",
+      "unicode_decimal": 59397
+    },
+    {
+      "icon_id": "953311",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "5767993",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "5835456",
+      "name": "表情",
+      "font_class": "biaoqing",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "10664706",
+      "name": "搜索 search",
+      "font_class": "search",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "13119207",
+      "name": "通讯录",
+      "font_class": "tongxunlu1",
+      "unicode": "e7d3",
+      "unicode_decimal": 59347
+    },
+    {
+      "icon_id": "797263",
+      "name": "我",
+      "font_class": "wo",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "1917137",
+      "name": "微信",
+      "font_class": "wechat",
+      "unicode": "e802",
+      "unicode_decimal": 59394
+    },
+    {
+      "icon_id": "7335626",
+      "name": "通讯录",
+      "font_class": "tongxunlu",
+      "unicode": "eb46",
+      "unicode_decimal": 60230
+    },
+    {
+      "icon_id": "7550210",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "11593511",
+      "name": "发现",
+      "font_class": "danyehuaban",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    }
+  ]
+}
