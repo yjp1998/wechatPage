@@ -20,6 +20,7 @@ input {
 }
 body {
   background-color: #ededed;
+  overflow: hidden;
 }
 .top_backButton {
   position: absolute;

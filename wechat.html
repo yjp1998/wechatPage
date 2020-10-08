@@ -45,7 +45,7 @@
       </div>
     </div>
     <!-- 聊天页面详情部分 -->
-    <div class="chat_part" style="display: none;">
+    <div class="chat_part">
       <div class="chat_top">
         <input type="button" class="chat_top_backButton top_backButton iconfont" value="&#xe611;">
         马云
@@ -54,7 +54,6 @@
       <div class="chat_center">
         <div class="chat_info">
           <div class="chat_dialog_profile"></div>
-          <div class="chat_dialog_nickname">马云</div>
           <div class="chat_dialog_content">
             <span>你好，很高兴认识你！</span>
           </div>
@@ -296,9 +295,9 @@
     function enterChat() {
       let chatDiv = document.querySelector('.tab_page_content_chat');
       chatDiv.onclick = () => {
-        document.querySelector('.chat_part').style.display = 'block';
+        document.querySelector('.chat_part').style.right = 0;
         wechatPage.style.display = 'none'
-        document.querySelector('.tabs_wrap').style.display = 'none'
+        document.querySelector('.tabs_wrap').style.display = 'none';
       }
     }
     enterChat();
@@ -308,7 +307,7 @@
       let backBtn = document.querySelector('.chat_top_backButton');
       const chatPart = document.querySelector('.chat_part');
       backBtn.onclick = () => {
-        chatPart.style.display = 'none';
+        chatPart.style.right = '-100%';
         wechatPage.style.display = 'block';
         document.querySelector('.tabs_wrap').style.display = 'block';
       }
@@ -317,10 +316,11 @@
 
     // 点击头像打开好友信息
     function checkFdInfo() {
+      
       let profile = document.querySelector('.chat_dialog_profile');
       let fdInfo = document.querySelector('.fd_info_part')
       profile.onclick = () => {
-        fdInfo.style.display = 'block';
+        fdInfo.style.right = 0;
         document.querySelector('.chat_part').style.display = 'none';
       }
     }
@@ -330,7 +330,7 @@
     function returnChatWindow() {
       const backChatBtn = document.querySelector('.fd_info_top_backButton');
       backChatBtn.onclick = () => {
-        document.querySelector('.fd_info_part').style.display = 'none';
+        document.querySelector('.fd_info_part').style.right = '-100%';
         document.querySelector('.chat_part').style.display = 'block';
       }
     }
