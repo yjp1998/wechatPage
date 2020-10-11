@@ -23,12 +23,21 @@
   font-size: 20px;
   top: 22px;
 }
+.chat_center_wrap {
+  position: absolute;
+}
+.chat_center {
+  flex: 1;
+  height: auto;
+  width: auto;
+  padding-top: 60px;
+}
 .chat_info {
   display: block;
+  width: auto;
   margin: 10px 10px;
   height: auto;
   overflow: hidden;
-  position: relative;
 }
 .chat_dialog_profile {
   height: 42px;
@@ -45,11 +54,9 @@
   max-width: 400px;
   height: auto;
   display: inline-block;
-  position: absolute;
-  left: 55px;
   border-radius: 5px;
   background-color: white;
-  line-height: auto;
+  overflow: hidden;
 }
 .chat_dialog_content span {
   display: inline-block;
@@ -85,10 +92,4 @@
 .chat_bottom_item > input {
   font-size: 30px;
   line-height: 49px;
-}
-.chat_center {
-  flex: 1;
-  overflow: auto;
-  height: auto;
-  padding: 60px 0;
 }
