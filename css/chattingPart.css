@@ -30,7 +30,7 @@
   flex: 1;
   height: auto;
   width: auto;
-  padding-top: 60px;
+  padding: 60px 0;
 }
 .chat_info {
   display: block;

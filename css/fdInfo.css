@@ -1,12 +1,12 @@
 .fd_info_part {
-  height: 736px;
+  height: auto;
   width: 100%;
   flex-direction: column;
   align-items: flex-start;
   background-color: #f6f6f6;
   position: absolute;
-  right: -100%;
   transition: right 0.2s;
+  overflow: hidden;
   /* float: right; */
 }
 .fd_info_top {

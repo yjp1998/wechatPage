@@ -9,11 +9,9 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/minePart.css">
   <link rel="stylesheet" href="css/findingPart.css">
-  <link rel="stylesheet" href="css/chattingPart.css">
   <link rel="stylesheet" href="css/bottomTabsPart.css">
   <link rel="stylesheet" href="css/addressbookPart.css">
   <link rel="stylesheet" href="css/font.css">
-  <link rel="stylesheet" href="css/fdInfo.css">
 </head>
 
 <body>
@@ -39,80 +37,8 @@
           </div>
           <div class="chat_content">
             <div class="chat_content_name">马云</div>
-            <div class="chat_content_text">111</div>
+            <div class="chat_content_text">你好，很高兴认识你！</div>
           </div>
-        </div>
-      </div>
-    </div>
-    <!-- 聊天页面详情部分 -->
-    <div class="chat_part">
-      <div class="chat_top">
-        <input type="button" class="chat_top_backButton top_backButton iconfont" value="&#xe611;">
-        马云
-        <input type="button" class="chat_top_moreButton top_moreButton iconfont" value="&#xe627;">
-      </div>
-      <div class="chat_center_wrap">
-        <div class="chat_center">
-          <div class="chat_info">
-            <div class="chat_dialog_profile"></div>
-            <div class="chat_dialog_content">
-              <span>你好，很高兴认识你！</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="chat_bottom">
-        <div class="chat_bottom_item">
-          <input class="iconfont" type="button" value="&#xe805;">
-        </div>
-        <div class="chat_bottom-item chat_bottom_item_text">
-          <input type="text">
-        </div>
-        <div class="chat_bottom_item">
-          <input class="iconfont" type="button" value="&#xe60b;">
-        </div>
-        <div class="chat_bottom_item">
-          <input class="iconfont" type="button" value="&#xe68a;">
-        </div>
-      </div>
-    </div>
-    <!-- 好友信息部分 -->
-    <div class="fd_info_part">
-      <div class="fd_info_top">
-        <div class="fd_info_top_btnPart" style="border-bottom: none;">
-          <input type="button" class="fd_info_top_backButton top_backButton iconfont" value="&#xe611;" style="font-size: 20px;">
-          <input type="button" class="fd_info_top_moreButton top_moreButton iconfont" value="&#xe627;" style="font-size: 20px;">
-        </div>
-        <div class="fd_info_top_introducePart">
-          <div class="fd_info_top_introducePart_profile"></div>
-          <div class="fd_info_top_introducePart_textIntroduce">
-            <span>马云</span>
-            <span>昵称: mayun</span>
-            <span>微信号: 马云</span>
-            <span>地区: 中国</span>
-          </div>
-        </div>
-        <div class="fd_info_top_tagPart">备注和标签</div>
-        <div class="fd_info_top_limitPart">朋友权限</div>
-      </div>
-      <div class="fd_info_center">
-        <div class="fd_info_center_item">
-          朋友圈
-          <span class="iconfont">&#xe612;</span>
-        </div>
-        <div class="fd_info_center_item">
-          更多信息
-          <span class="iconfont">&#xe612;</span>
-        </div>
-      </div>
-      <div class="fd_info_bottom">
-        <div class="fd_info_bottom_sendMessage">
-          <span class="iconfont">&#xe65d;</span>
-          发消息
-        </div>
-        <div class="fd_info_bottom_video">
-          <span class="iconfont">&#xe71f;</span>
-          音视频通话
         </div>
       </div>
     </div>
@@ -251,16 +177,17 @@
     </div>
   </div>
   <script>
-    const wechatBtn = document.querySelector('.wechat_btn');
-    const addressBookBtn = document.querySelector('.addressBook_btn');
-    const findBtn = document.querySelector('.find_btn');
-    const mineBtn = document.querySelector('.mine_btn');
-    const wechatPage = document.querySelector('.wechat_content');
-    const addressBookPage = document.querySelector('.addressBook_content');
-    const findPage = document.querySelector('.find_content');
-    const minePage = document.querySelector('.mine_content');
+
     // 切换页面
     function switchPage() {
+      const wechatBtn = document.querySelector('.wechat_btn');
+      const addressBookBtn = document.querySelector('.addressBook_btn');
+      const findBtn = document.querySelector('.find_btn');
+      const mineBtn = document.querySelector('.mine_btn');
+      const wechatPage = document.querySelector('.wechat_content');
+      const addressBookPage = document.querySelector('.addressBook_content');
+      const findPage = document.querySelector('.find_content');
+      const minePage = document.querySelector('.mine_content');
       wechatBtn.onclick = function () {
         wechatBtn.style.color = 'green';
         wechatPage.style.display = 'block';
@@ -292,51 +219,13 @@
     }
     switchPage();
 
-
-    // 进入聊天界面
-    function enterChat() {
+    let interChatWindow = (function() {
       let chatDiv = document.querySelector('.tab_page_content_chat');
-      chatDiv.onclick = () => {
-        document.querySelector('.chat_part').style.right = 0;
-        wechatPage.style.display = 'none'
-        document.querySelector('.tabs_wrap').style.display = 'none';
-      }
-    }
-    enterChat();
-
-    // 后退按钮
-    function returnWechatPage() {
-      let backBtn = document.querySelector('.chat_top_backButton');
-      const chatPart = document.querySelector('.chat_part');
-      backBtn.onclick = () => {
-        chatPart.style.right = '-100%';
-        wechatPage.style.display = 'block';
-        document.querySelector('.tabs_wrap').style.display = 'block';
-      }
-    }
-    returnWechatPage();
-
-    // 点击头像打开好友信息
-    function checkFdInfo() {
-      
-      let profile = document.querySelector('.chat_dialog_profile');
-      let fdInfo = document.querySelector('.fd_info_part')
-      profile.onclick = () => {
-        fdInfo.style.right = 0;
-        document.querySelector('.chat_part').style.display = 'none';
-      }
-    }
-    checkFdInfo();
-
-    // 返回聊天窗口
-    function returnChatWindow() {
-      const backChatBtn = document.querySelector('.fd_info_top_backButton');
-      backChatBtn.onclick = () => {
-        document.querySelector('.fd_info_part').style.right = '-100%';
-        document.querySelector('.chat_part').style.display = 'block';
-      }
-    }
-    returnChatWindow();
+      chatDiv.addEventListener('click', (event) => {
+          window.location.assign('./chatWindow.html');          
+      }, false);
+    })();
+    interChatWindow();
   </script>
 </body>
 
