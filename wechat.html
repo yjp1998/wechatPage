@@ -9,11 +9,9 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/minePart.css">
   <link rel="stylesheet" href="css/findingPart.css">
-  <link rel="stylesheet" href="css/chattingPart.css">
   <link rel="stylesheet" href="css/bottomTabsPart.css">
   <link rel="stylesheet" href="css/addressbookPart.css">
   <link rel="stylesheet" href="css/font.css">
-  <link rel="stylesheet" href="css/fdInfo.css">
 </head>
 
 <body>
@@ -39,7 +37,7 @@
           </div>
           <div class="chat_content">
             <div class="chat_content_name">马云</div>
-            <div class="chat_content_text">111</div>
+            <div class="chat_content_text">你好，很高兴认识你！</div>
           </div>
         </div>
       </div>
@@ -180,16 +178,17 @@
     </div>
   </div>
   <script>
-    const wechatBtn = document.querySelector('.wechat_btn');
-    const addressBookBtn = document.querySelector('.addressBook_btn');
-    const findBtn = document.querySelector('.find_btn');
-    const mineBtn = document.querySelector('.mine_btn');
-    const wechatPage = document.querySelector('.wechat_content');
-    const addressBookPage = document.querySelector('.addressBook_content');
-    const findPage = document.querySelector('.find_content');
-    const minePage = document.querySelector('.mine_content');
+
     // 切换页面
     function switchPage() {
+      const wechatBtn = document.querySelector('.wechat_btn');
+      const addressBookBtn = document.querySelector('.addressBook_btn');
+      const findBtn = document.querySelector('.find_btn');
+      const mineBtn = document.querySelector('.mine_btn');
+      const wechatPage = document.querySelector('.wechat_content');
+      const addressBookPage = document.querySelector('.addressBook_content');
+      const findPage = document.querySelector('.find_content');
+      const minePage = document.querySelector('.mine_content');
       wechatBtn.onclick = function () {
         wechatBtn.style.color = 'green';
         wechatPage.style.display = 'block';

@@ -20,16 +20,21 @@ input {
 }
 body {
   background-color: #ededed;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .top_backButton {
   position: absolute;
-  top: 12px;
+  top: 21px;
   left: 10px;
   cursor: pointer;
 }
 .top_moreButton {
   position: absolute;
-  top: 12px;
+  top: 21px;
   right: 10px;
+}
+.home_container {
+  right: 0;
+  transition: right 2s;
+  position: relative;
 }
