@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>微信</title>
+  <title>Document</title>
   <link rel="stylesheet" href="css/wechatPart.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/minePart.css">
@@ -17,340 +17,121 @@
 </head>
 
 <body>
-  <div class="home_container">
-    <!-- 微信页面部分 -->
-    <div class="tab_page wechat_content" style="display: block;">
-      <!-- 微信头部 -->
-      <div class="tab_page_header_wrap">
-        <div class="tab_page_header">
-          <span>微信</span>
-          <input type="button" class="iconfont" value="&#xe68a;">
-        </div>
-      </div>
-      <!-- 微信内容 -->
-      <div class="tab_page_content">
-        <!-- 搜索框 -->
-        <div class="tab_page_content_search">
-          <input type="text" class="search_input iconfont" placeholder="&#xe602; 搜索" style="font-size: 12px;">
-        </div>
-        <!-- 聊天框 -->
-        <div class="tab_page_content_chat">
-          <div class="chat_profile">
-          </div>
-          <div class="chat_content">
-            <div class="chat_content_name">马云</div>
-            <div class="chat_content_text">111</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 通讯录页面部分 -->
-    <div class="tab_page addressBook_content" style="display: none;">
-      <!-- 通讯录页面头部 -->
-      <div class="tab_page_header_wrap">
-        <div class="tab_page_header">
-          <span>通讯录</span>
-          <input type="button" class="iconfont" value="&#xe628;">
-        </div>
-      </div>
-      <!-- 通讯录页面内容 -->
-      <div class="tab_page_content">
-        <!-- 搜索框 -->
-        <div class="tab_page_content_search">
-          <input type="text" class="search_input iconfont" placeholder="&#xe602; 搜索" style="font-size: 12px;">
-        </div>
-        <!-- 功能框 -->
-        <div class="addressBook_item">
-          <div class="addressBook_item_content">
-            <div class="item_content_img newFriend"></div>
-            <div class="item_content_text">新的朋友</div>
-          </div>
-          <div class="addressBook_item_content">
-            <div class="item_content_img group"></div>
-            <div class="item_content_text">群聊</div>
-          </div>
-          <div class="addressBook_item_content">
-            <div class="item_content_img tag"></div>
-            <div class="item_content_text">标签</div>
-          </div>
-          <div class="addressBook_item_content">
-            <div class="item_content_img officialAccount"></div>
-            <div class="item_content_text">公众号</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 发现页面部分 -->
-    <div class="tab_page find_content" style="display: none;">
-      <!-- 发现页面头部 -->
-      <div class="tab_page_header_wrap">
-        <div class="tab_page_header">
-          <span>发现</span>
-        </div>
-      </div>
-      <!-- 发现页面内容 -->
-      <div class="tab_page_content">
-        <div class="find_item">
-          <div class="find_item_content iconfont">
-            <span class="iconfont">&#xe667;</span>
-            <span>朋友圈</span>
-            <span class="iconfont">&#xe612;</span>
-          </div>
-          <div class="find_item_content iconfont">
-            <span class="iconfont">&#xe69e;</span>
-            <span>游戏</span>
-            <span class="iconfont">&#xe612;</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 我页面部分 -->
-    <div class="tab_page mine_content" style="display: none;">
-      <!-- 我页面头部 -->
-      <div class="tab_page_mine_header">
-        <input type="button" class="top-button iconfont" value="&#xeb48;" style="font-size: 20px;">
-      </div>
-      <!-- 我页面内容 -->
-      <!-- 我页面个人部分 -->
-      <div class="tab_page_content">
-        <div class="mine_personal_content">
-          <span class="mine_personal_content_Selfie"></span>
-          <span>一个pen</span>
-          <span>微信号：123456789</span>
-          <span class="iconfont">&#xeb4a;</span>
-          <span class="iconfont">&#xe612;</span>
-        </div>
-        <!-- 我页面支付部分 -->
-        <div class="mine_payment_content">
-          <span class="iconfont">&#xe634;</span>
-          <span>支付</span>
-          <span class="iconfont">&#xe612;</span>
-        </div>
-        <!-- 我页面生活部分 -->
-        <div class="mine_life_content">
-          <div class="mine_life_content_item">
-            <span class="iconfont">&#xe60a;</span>
-            <span>收藏</span>
-            <span class="iconfont">&#xe612;</span>
-          </div>
-          <div class="mine_life_content_item">
-            <span class="iconfont">&#xe621;</span>
-            <span>相册</span>
-            <span class="iconfont">&#xe612;</span>
-          </div>
-          <div class="mine_life_content_item">
-            <span class="iconfont">&#xeb49;</span>
-            <span>卡包</span>
-            <span class="iconfont">&#xe612;</span>
-          </div>
-          <div class="mine_life_content_item">
-            <span class="iconfont">&#xe60b;</span>
-            <span>表情</span>
-            <span class="iconfont">&#xe612;</span>
-          </div>
-        </div>
-        <!-- 我页面设置部分 -->
-        <div class="mine_setting_content">
-          <span class="iconfont">&#xe606;</span>
-          <span>设置</span>
-          <span class="iconfont">&#xe612;</span>
-        </div>
-      </div>
-    </div>
-    <!-- 底部切换 -->
-    <div class="tabs_wrap">
-      <div class="tabs">
-        <div class="btn wechat_btn">
-          <span class="iconfont">&#xe65d;</span>
-          <span>微信</span>
-        </div>
-        <div class="btn addressBook_btn">
-          <span class="iconfont">&#xe7d3;</span>
-          <span>通讯录</span>
-        </div>
-        <div class="btn find_btn">
-          <span class="iconfont">&#xe636;</span>
-          <span>发现</span>
-        </div>
-        <div class="btn mine_btn">
-          <span class="iconfont">&#xe626;</span>
-          <span>我</span>
-        </div>
-      </div>
+  <div class="tabs_wrap">
+    <div class="tabs">
+      <a class="btn wechat_btn router" href="#/home">
+        <span class="iconfont">&#xe65d;</span>
+        <span>微信</span>
+      </a>
+      <a class="btn addressBook_btn router" href="#/addressBook">
+        <span class="iconfont">&#xe7d3;</span>
+        <span>通讯录</a>
+      </a>
+      <a class="btn find_btn router" href="#/find">
+        <span class="iconfont">&#xe636;</span>
+        <span>发现</span>
+      </a>
+      <a class="btn mine_btn router" href="#/mine">
+        <span class="iconfont">&#xe626;</span>
+        <span>我</span>
+      </a>
     </div>
   </div>
+  <div id="router-view"></div>
+  <script src="./pages.js"></script>
   <script>
-    const wechatBtn = document.querySelector('.wechat_btn');
-    const addressBookBtn = document.querySelector('.addressBook_btn');
-    const findBtn = document.querySelector('.find_btn');
-    const mineBtn = document.querySelector('.mine_btn');
-    const wechatPage = document.querySelector('.wechat_content');
-    const addressBookPage = document.querySelector('.addressBook_content');
-    const findPage = document.querySelector('.find_content');
-    const minePage = document.querySelector('.mine_content');
-    // 切换页面
-    function switchPage() {
-      wechatBtn.onclick = function () {
-        wechatBtn.style.color = 'green';
-        wechatPage.style.display = 'block';
-        addressBookPage.style.display = 'none';
-        findPage.style.display = 'none';
-        minePage.style.display = 'none';
-      }
-      addressBookBtn.onclick = function () {
-        wechatBtn.style.color = 'black';
-        wechatPage.style.display = 'none';
-        addressBookPage.style.display = 'block';
-        findPage.style.display = 'none';
-        minePage.style.display = 'none';
-      }
-      findBtn.onclick = function () {
-        wechatBtn.style.color = 'black';
-        wechatPage.style.display = 'none';
-        addressBookPage.style.display = 'none';
-        findPage.style.display = 'block';
-        minePage.style.display = 'none';
-      }
-      mineBtn.onclick = function () {
-        wechatBtn.style.color = 'black';
-        wechatPage.style.display = 'none';
-        addressBookPage.style.display = 'none';
-        findPage.style.display = 'none';
-        minePage.style.display = 'block';
-      }
-    }
-    switchPage();
 
-    class PageContainer {
+    class Router {
       constructor() {
-        this.container = Array.from(document.querySelector('.home_container').children);
+        this.routes = {};
+        this.currentUrl = '';
+        this.init();
       }
 
-      interChat() {
-        let divElement = document.createElement('div');
-        divElement.innerHTML = `
-          <div class="chat_top">
-            <input type="button" class="chat_top_backButton top_backButton iconfont" value="&#xe611;">
-              马云
-            <input type="button" class="chat_top_moreButton top_moreButton iconfont" value="&#xe627;">
-          </div>
-          <div class="chat_center_wrap">
-            <div class="chat_center">
-              <div class="chat_info">
-                <div class="chat_dialog_profile"></div>
-                <div class="chat_dialog_content">
-                  <span>你好，很高兴认识你！</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="chat_bottom">
-            <div class="chat_bottom_item">
-              <input class="iconfont" type="button" value="&#xe805;">
-            </div>
-            <div class="chat_bottom-item chat_bottom_item_text">
-              <input type="text">
-            </div>
-            <div class="chat_bottom_item">
-              <input class="iconfont" type="button" value="&#xe60b;">
-            </div>
-            <div class="chat_bottom_item">
-              <input class="iconfont" type="button" value="&#xe68a;">
-            </div>
-          </div>
-        `;
-        divElement.className = 'chat_part';
-        document.querySelector('.tab_page_content_chat').addEventListener('click', () => {
-          document.querySelector('.home_container').appendChild(divElement);
-          setInterval(() => {
-            divElement.style.right = 0;
-          }, 1);
-          wechatPage.style.display = 'none';
-          document.querySelector('.tabs_wrap').style.display = 'none';
-          this.container.push(divElement)
-        })
+      init() {
+        addEventListener('load', this.refresh.bind(this), false);
+        addEventListener('hashchange', this.refresh.bind(this), false);
       }
 
-      readFdInfo() {
-        let divElement = document.createElement('div');
-        
-        divElement.innerHTML = `
-          <div class="fd_info_top">
-            <div class="fd_info_top_btnPart" style="border-bottom: none;">
-              <input type="button" class="fd_info_top_backButton top_backButton iconfont backChat" value="&#xe611;"
-                style="font-size: 20px;">
-              <input type="button" class="fd_info_top_moreButton top_moreButton iconfont" value="&#xe627;"
-                style="font-size: 20px;">
-            </div>
-            <div class="fd_info_top_introducePart">
-              <div class="fd_info_top_introducePart_profile"></div>
-              <div class="fd_info_top_introducePart_textIntroduce">
-                <span>马云</span>
-                <span>昵称: mayun</span>
-                <span>微信号: 马云</span>
-                <span>地区: 中国</span>
-              </div>
-            </div>
-            <div class="fd_info_top_tagPart">备注和标签</div>
-            <div class="fd_info_top_limitPart">朋友权限</div>
-          </div>
-          <div class="fd_info_center">
-            <div class="fd_info_center_item">
-              朋友圈
-              <span class="iconfont">&#xe612;</span>
-            </div>
-            <div class="fd_info_center_item">
-              更多信息
-              <span class="iconfont">&#xe612;</span>
-            </div>
-          </div>
-          <div class="fd_info_bottom">
-            <div class="fd_info_bottom_sendMessage backChat">
-              <span class="iconfont">&#xe65d;</span>
-              发消息
-            </div>
-            <div class="fd_info_bottom_video">
-              <span class="iconfont">&#xe71f;</span>
-              音视频通话
-            </div>
-          </div>
-        `;
-        divElement.className = 'fd_info_part';
-        document.querySelector('.chat_dialog_profile').addEventListener('click', () => {
-          document.querySelector('.home_container').appendChild(divElement);
-          document.querySelector('.chat_part').style.display = 'none';
-          setInterval(() => {
-            divElement.style.right = 0;
-          }, 1);
-          this.container.push(divElement)
-        })
+      refresh() {
+        this.currentUrl = location.hash.slice(1);
+        if (location.hash == "") {
+          document.getElementById("router-view").innerHTML = homePage;
+          return;
+        } else if (this.routes[this.currentUrl]) {
+          this.routes[this.currentUrl]();
+        }
       }
 
-      pop() {
-        let lastChild = document.querySelector('.home_container').lastChild;
-        
-        if (lastChild.className == 'chat_part') {
-          document.querySelector('.chat_top_backButton').addEventListener('click', () => {
-            document.querySelector('.home_container').removeChild(lastChild);
-            this.container.pop(lastChild);
-            wechatPage.style.display = 'block';
-            document.querySelector('.tabs_wrap').style.display = 'block';
-          })
-        } else if (lastChild.className == 'fd_info_part')
-          document.querySelector('.fd_info_top_backButton').addEventListener('click', () => {
-            document.querySelector('.home_container').removeChild(lastChild);
-            this.container.pop(lastChild);
-            document.querySelector('.chat_part').style.right = 0;
-            document.querySelector('.chat_part').style.display = 'block';
-          })
+      register(obj) {
+        this.routes[obj.path] = function () {
+          changeComponent(obj.component)
+        }
       }
     }
 
-    let container = new PageContainer();
+    function changeComponent(name) {
+      for (let i = 0; i < pages.length; i++) {
+        if (pages[i].name == name) {
+          document.querySelector('#router-view').innerHTML = pages[i].component;
+          break;
+        }
+      }
+    }
 
-    container.interChat();
+    let pages = [
+      {
+        name: 'home',
+        component: homePage
+      },
+      {
+        name: 'addressBook',
+        component: addressBookPage
+      },
+      {
+        name: 'find',
+        component: findPage
+      }, {
+        name: 'mine',
+        component: minePage
+      },
+      {
+        name: 'chatWindow',
+        component: chatWindowPage
+      },
+      {
+        name: 'fdInfo',
+        component: fdInfoPage
+      }
+    ];
 
+    let routers = new Router();
+    routers.register({
+      path: '/home',
+      component: 'home'
+    });
+    routers.register({
+      path: '/addressBook',
+      component: 'addressBook'
+    });
+    routers.register({
+      path: '/find',
+      component: 'find'
+    });
+    routers.register({
+      path: '/mine',
+      component: 'mine'
+    });
+    routers.register({
+      path: '/home/chatWindow',
+      component: 'chatWindow'
+    });
+    routers.register({
+      path: '/home/chatWindow/fdInfo',
+      component: 'fdInfo'
+    }); 
   </script>
+
 </body>
 
 </html>

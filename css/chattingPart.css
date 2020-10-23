@@ -1,8 +1,6 @@
 /* 聊天详情部分 */
 .chat_part {
   position: relative;
-  right: -100%;
-  transition: right 0.2s;
 }
 .chat_top {
   width: 100%;
@@ -72,6 +70,7 @@
   overflow: hidden;
   position: fixed;
   bottom: 0;
+  height: 60px;
 }
 .chat_bottom_item {
   text-align: center;
