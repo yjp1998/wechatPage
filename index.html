@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>微信页面</title>
+  <title>Document</title>
   <link rel="stylesheet" href="css/wechatPart.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/minePart.css">
@@ -17,123 +18,115 @@
 </head>
 
 <body>
+  <div class="home_container"></div>
   <div class="tabs_wrap">
     <div class="tabs">
-      <a class="btn wechat_btn router" href="#/home">
+      <a class="btn wechat_btn">
         <span class="iconfont">&#xe65d;</span>
         <span>微信</span>
       </a>
-      <a class="btn addressBook_btn router" href="#/addressBook">
+      <a class="btn addressBook_btn">
         <span class="iconfont">&#xe7d3;</span>
         <span>通讯录</a>
       </a>
-      <a class="btn find_btn router" href="#/find">
+      <a class="btn find_btn">
         <span class="iconfont">&#xe636;</span>
         <span>发现</span>
       </a>
-      <a class="btn mine_btn router" href="#/mine">
+      <a class="btn mine_btn router">
         <span class="iconfont">&#xe626;</span>
         <span>我</span>
       </a>
     </div>
   </div>
-  <div id="router-view"></div>
-  <script src="./pages.js"></script>
+  <script src="./js/Component.js"></script>
   <script>
-
+    const config = {
+      Home: {
+        title: 'home',
+        component: HomePage,
+        page: null
+      },
+      AddressBook: {
+        title: 'addressBook',
+        component: AddressBookPage,
+        page: null
+      },
+      Find: {
+        title: 'find',
+        component: FindPage,
+        page: null
+      },
+      Mine: {
+        title: 'mine',
+        component: MinePage,
+        page: null
+      },
+      ChatWindow: {
+        title: 'chatWindow',
+        component: ChatWindow,
+        page: null
+      },
+      FdInfo: {
+        title: 'fdInfo',
+        component: FdInfoPage,
+        page: null
+      }
+    }
+    let homePage = new HomePage();
+    let addressBookPage = new AddressBookPage();
+    let findPage = new FindPage();
+    let minePage = new MinePage()
     class Router {
       constructor() {
-        this.routes = {};
-        this.currentUrl = '';
-        this.init();
+        this.routes = {},
+          this.length = 0
       }
 
-      init() {
-        addEventListener('load', this.refresh.bind(this), false);
-        addEventListener('hashchange', this.refresh.bind(this), false);
+      go(page) {
+        this.routes[this.length] = config[page];
+        this.routes[this.length].page = new config[page].component;
+        this.length++;
       }
 
-      refresh() {
-        this.currentUrl = location.hash.slice(1);
-        if (location.hash == "") {
-          document.getElementById("router-view").innerHTML = homePage;
-          return;
-        } else if (this.routes[this.currentUrl]) {
-          this.routes[this.currentUrl]();
-        }
-      }
-
-      register(obj) {
-        this.routes[obj.path] = function () {
-          changeComponent(obj.component)
-        }
+      back() {
+        const cur = this.routes[this.length - 1];
+        this.routes[this.length - 1].page.destory();
+        delete curl
+        this.length--;
       }
     }
-
-    function changeComponent(name) {
-      for (let i = 0; i < pages.length; i++) {
-        if (pages[i].name == name) {
-          document.querySelector('#router-view').innerHTML = pages[i].component;
-          break;
+    let changePage = function () {
+      document.querySelector('.wechat_btn').addEventListener('click', () => {
+        for (let i = 0; i < document.querySelector('.home_container').childNodes.length; i++) {
+          document.querySelector('.home_container').childNodes[i].style.display = 'none';
+          document.querySelector('.home_container').childNodes[0].style.display = 'block';
         }
-      }
-    }
+      }, false)
+      document.querySelector('.addressBook_btn').addEventListener('click', () => {
+        for (let i = 0; i < document.querySelector('.home_container').childNodes.length; i++) {
+          document.querySelector('.home_container').childNodes[i].style.display = 'none';
+          document.querySelector('.home_container').childNodes[1].style.display = 'block';
+        }
+      }, false)
+      document.querySelector('.find_btn').addEventListener('click', () => {
+        for (let i = 0; i < document.querySelector('.home_container').childNodes.length; i++) {
+          document.querySelector('.home_container').childNodes[i].style.display = 'none';
+          document.querySelector('.home_container').childNodes[2].style.display = 'block';
+        }
+      }, false)
+      document.querySelector('.mine_btn').addEventListener('click', () => {
+        for (let i = 0; i < document.querySelector('.home_container').childNodes.length; i++) {
+          document.querySelector('.home_container').childNodes[i].style.display = 'none';
+          document.querySelector('.home_container').childNodes[3].style.display = 'block';
+        }
+      }, false)
+    };
 
-    let pages = [
-      {
-        name: 'home',
-        component: homePage
-      },
-      {
-        name: 'addressBook',
-        component: addressBookPage
-      },
-      {
-        name: 'find',
-        component: findPage
-      }, {
-        name: 'mine',
-        component: minePage
-      },
-      {
-        name: 'chatWindow',
-        component: chatWindowPage
-      },
-      {
-        name: 'fdInfo',
-        component: fdInfoPage
-      }
-    ];
+    let router = new Router();
+    changePage();
 
-
-
-    let routers = new Router();
-    routers.register({
-      path: '/home',
-      component: 'home'
-    });
-    routers.register({
-      path: '/addressBook',
-      component: 'addressBook'
-    });
-    routers.register({
-      path: '/find',
-      component: 'find'
-    });
-    routers.register({
-      path: '/mine',
-      component: 'mine'
-    });
-    routers.register({
-      path: '/home/chatWindow',
-      component: 'chatWindow'
-    });
-    routers.register({
-      path: '/home/chatWindow/fdInfo',
-      component: 'fdInfo'
-    }); 
   </script>
-
 </body>
 
 </html>

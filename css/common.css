@@ -35,7 +35,5 @@ body {
   right: 10px;
 }
 .home_container {
-  right: 0;
-  transition: right 2s;
   position: relative;
 }

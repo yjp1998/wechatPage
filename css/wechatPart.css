@@ -24,7 +24,8 @@
 /* 搜索框 */
 .tab_page_content_search {
   height: 40px;
-  position: relative;
+  position: absolute;
+  top: 60px;
   width: 100%;
   text-align: center;
   background-color: #f6f6f6;
@@ -46,7 +47,8 @@
 }
 /* 聊天框 */
 .tab_page_content_chat {
-  position: relative;
+  position: absolute;
+  top: 100px;
   height: 58px;
   width: 100%;
   background-color: #fff;
