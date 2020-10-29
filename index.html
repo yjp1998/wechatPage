@@ -90,9 +90,8 @@
       }
 
       back() {
-        const cur = this.routes[this.length - 1];
         this.routes[this.length - 1].page.destory();
-        delete curl
+        delete this.routes[this.length - 1];
         this.length--;
       }
     }
