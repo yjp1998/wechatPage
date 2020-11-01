@@ -58,6 +58,6 @@ body {
 }
 
 /* 按钮点击后变绿色 */
-.green_cover {
+#green_cover {
   color: green;
 }

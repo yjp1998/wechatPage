@@ -21,7 +21,7 @@
 <body>
   <div class="home_container"></div>
   <div class="tabs">
-    <div class="btn wechat_btn">
+    <div class="btn wechat_btn" id="green_cover">
       <span class="iconfont">&#xe65d;</span>
       <span>微信</span>
     </div>
@@ -96,32 +96,56 @@
     }
 
     let changePage = function () {
-      document.querySelector('.wechat_btn').addEventListener('click', () => {
+      const home_btn = document.querySelector('.wechat_btn');
+      const addressBook_btn = document.querySelector('.addressBook_btn');
+      const find_btn = document.querySelector('.find_btn');
+      const mine_btn = document.querySelector('.mine_btn');
+      home_btn.addEventListener('click', () => {
         for (let i = 0; i < document.querySelector('.home_container').childNodes.length; i++) {
           document.querySelector('.home_container').childNodes[i].style.display = 'none';
           document.querySelector('.home_container').childNodes[0].style.display = 'block';
+          home_btn.id = 'green_cover';
+          addressBook_btn.id = '';
+          find_btn.id = '';
+          mine_btn.id = '';
         }
       }, false)
-      document.querySelector('.addressBook_btn').addEventListener('click', () => {
+      addressBook_btn.addEventListener('click', () => {
         for (let i = 0; i < document.querySelector('.home_container').childNodes.length; i++) {
           document.querySelector('.home_container').childNodes[i].style.display = 'none';
           document.querySelector('.home_container').childNodes[1].style.display = 'block';
+          home_btn.id = '';
+          addressBook_btn.id = 'green_cover';
+          find_btn.id = '';
+          mine_btn.id = '';
+          
         }
       }, false)
-      document.querySelector('.find_btn').addEventListener('click', () => {
+      find_btn.addEventListener('click', () => {
         for (let i = 0; i < document.querySelector('.home_container').childNodes.length; i++) {
           document.querySelector('.home_container').childNodes[i].style.display = 'none';
           document.querySelector('.home_container').childNodes[2].style.display = 'block';
+          home_btn.id = '';
+          addressBook_btn.id = '';
+          find_btn.id = 'green_cover';
+          mine_btn.id = '';
         }
       }, false)
-      document.querySelector('.mine_btn').addEventListener('click', () => {
+      mine_btn.addEventListener('click', () => {
         for (let i = 0; i < document.querySelector('.home_container').childNodes.length; i++) {
           document.querySelector('.home_container').childNodes[i].style.display = 'none';
           document.querySelector('.home_container').childNodes[3].style.display = 'block';
+          home_btn.id = '';
+          addressBook_btn.id = '';
+          find_btn.id = '';
+          mine_btn.id = 'green_cover';
         }
       }, false)
     };
 
+    let clickAddcolor = function () {
+       
+    }
     let router = new Router();
     changePage();
 
