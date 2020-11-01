@@ -1,0 +1,127 @@
+/* 我页面部分 */
+.mine_page {
+  position: relative;
+  width: 100%;
+}
+
+/* 头部部分 */
+.mine_header {
+  background-color: #fff;
+  height: 45px;
+  box-shadow: 0 -1px 1px rgba(100, 100, 100, .1);
+}
+.mine_header > input {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+}
+/* 我页面内容部分 */
+/* 我页面个人部分 */
+.mine_personal {
+  position: relative;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+}
+
+/* 我页面个人头像部分 */
+.mine_personal_selfie {
+  box-sizing: border-box;
+  height: 56px;
+  width: 56px;
+  margin: 8px 10px 6px 18px;
+  border-radius: 5px;
+  display: inline-block;
+  background-image: url('../img/selfie.jpg');
+  background-size: cover;
+}
+
+/* 我页面个人资料部分 */
+.mine_personal_text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 50px;
+}
+.mine_personal_text > span {
+  flex: 1;
+}
+.mine_personal_text > span:first-child {
+  line-height: 38px;
+}
+.mine_personal_text > span:nth-child(2) {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+/* 我页面个人图标部分 */
+.mine_personal_img span:first-child {
+  padding: 20px;
+  line-height: 80px;
+}
+.mine_personal_img span:nth-child(2) {
+  padding-right: 20px;
+}
+
+
+/* 我页面支付部分 */
+.mine_payment {
+  background-color: #fff;
+  border-top: 8px solid #f6f6f6;
+  height: 58px;
+  line-height: 58px;
+  position: relative;
+  display: flex;
+}
+.mine_payment > span:first-child {
+  padding: 0 15px 0 20px;
+}
+.mine_payment > span:nth-child(2) {
+  flex: 1;
+}
+.mine_payment > span:nth-child(3) {
+  padding-right: 20px;
+}
+
+
+/* 我页面生活部分 */
+.mine_life {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-top: 8px solid #f6f6f6;
+}
+.mine_life_item {
+  height: 58px;
+  line-height: 58px;
+  position: relative;
+  display: flex;
+}
+.mine_life_item > span:first-child {
+  padding: 0 15px 0 20px;
+}
+.mine_life_item > span:nth-child(2) {
+  flex: 1;
+}
+.mine_life_item > span:nth-child(3) {
+  padding-right: 20px;
+
+}
+/* 我页面设置部分 */
+.mine_setting {
+  background-color: #fff;
+  height: 58px;
+  line-height: 58px;
+  position: relative;
+  border-top: 8px solid #f6f6f6;
+  display: flex;
+}
+.mine_setting > span:first-child {
+  padding: 0 15px 0 20px;
+}
+.mine_setting > span:nth-child(2) {
+  flex: 1;
+}
+.mine_setting > span:nth-child(3) {
+  padding-right: 20px;
+}

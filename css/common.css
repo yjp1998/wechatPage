@@ -22,6 +22,7 @@ input {
 body {
   background-color: #ededed;
   overflow-x: hidden;
+  height: 100%;
 }
 .top_backButton {
   position: absolute;
@@ -36,4 +37,27 @@ body {
 }
 .home_container {
   position: relative;
+}
+/* 页面fixed空间填充 */
+.fixed_box {
+  position: relative;
+  height: 60px;
+}
+
+/* 搜索框 */
+.search_input {
+  background-color: white;
+  position: relative;
+  width: calc(100% - 20px);
+  height: 40px;
+  margin: 4px 10px 10px 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 100;
+  box-sizing: border-box;
+}
+
+/* 按钮点击后变绿色 */
+.green_cover {
+  color: green;
 }

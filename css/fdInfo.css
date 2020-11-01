@@ -1,23 +1,21 @@
+/* 好友信息部分 */
 .fd_info_part {
-  height: auto;
+  height: 100%;
   width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
   background-color: #f6f6f6;
-  position: absolute;
   transition: right 0.2s;
   overflow: hidden;
   position: fixed;
   top: 0;
-  z-index: 99;
-  height: 100%;
+  z-index: 3;
 }
+
+/* 好友信息头部 */
 .fd_info_top {
   background-color: #fff;
   width: 100%;
   text-align: center;
   line-height: 45px;
-  position: relative;
 }
 .fd_info_top > div {
   border-bottom: 1px solid #f6f6f6;
@@ -60,36 +58,14 @@
   width: 100%;
   
 }
-/* .fd_info_top_backButton {
-  position: absolute;
-  top: 12px;
-  left: 13px;
-} */
 .fd_info_top_backButton {
   font-size: 20px;
 }
 .fd_info_top_moreButton {
   font-size: 20px;
 }
-.fd_info_bottom {
-  background-color: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  box-shadow: 0 -1px 1px rgba(100, 100, 100, .1);
-  width: 100%;
-  margin-top: 5px;
-}
-.fd_info_bottom > div {
-  background-color: #fff;
-  border-bottom: 1px solid #f6f6f6;
-  height: 50px;
-  width: 100%;
-  text-align: center;
-  line-height: 50px;
-  color: #5f6a7c;
-  position: relative;
-}
+
+/* 好友信息中间 */
 .fd_info_center {
   width: 100%;
   display: flex;
@@ -110,9 +86,29 @@
   margin-left: 13px;
   border-bottom: 1px solid #f6f6f6;
   text-align: left;
-  position: relative;
 }
 .fd_info_center_item > span {
   position: absolute;
-  right: 0;
+  right: 20px;
+}
+
+/* 好友信息底部 */
+.fd_info_bottom {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 -1px 1px rgba(100, 100, 100, .1);
+  width: 100%;
+  margin-top: 5px;
+}
+.fd_info_bottom > div {
+  background-color: #fff;
+  border-bottom: 1px solid #f6f6f6;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  color: #5f6a7c;
+  position: relative;
 }

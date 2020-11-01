@@ -13,7 +13,8 @@ class Component {
   }
 
   insert() {
-    this.parent.appendChild(this.create())
+    this.parent.appendChild(this.create());
+    return this.create()
   }
 
   destory() {
@@ -31,6 +32,14 @@ class HomePage extends Component {
     this.init();
   }
 
+  create() {
+    const temp = this.renderDOM();
+    const div = document.createElement('div');
+    div.innerHTML = temp;
+    div.style.display = 'block';
+    return div;
+  }
+
   init() {
     this.create();
     this.insert();
@@ -38,40 +47,37 @@ class HomePage extends Component {
   }
 
   componentDidMount() {
-    document.querySelector('.tab_page_content_chat').addEventListener('click', () => {
+    document.querySelector('.home_content_chat').addEventListener('click', () => {
       router.go('ChatWindow');
     }, false);
   }
   
   render() {
     return `
-      <!-- 微信页面部分 -->
-      <div class="tab_page wechat_content page_part">
-        <!-- 微信头部 -->
-        <div class="tab_page_header_wrap">
-          <div class="tab_page_header">
-            <span>微信</span>
-            <input type="button" class="iconfont" value="&#xe68a;">
-          </div>
+    <!-- 主页页面部分 -->
+    <div class="home_page">
+      <!-- 主页头部 -->
+        <div class="home_header">
+          <span>微信</span>
+          <input type="button" class="iconfont" value="&#xe68a;">
         </div>
-        <!-- 微信内容 -->
-        <div class="tab_page_content">
-          <!-- 搜索框 -->
-          <div class="tab_page_content_search">
-            <input type="text" class="search_input iconfont" placeholder="&#xe602; 搜索" style="font-size: 12px;">
+        <div class="fixed_box"></div>
+      <!-- 主页内容 -->
+      <div class="home_content">
+        <!-- 搜索框 -->
+        <input type="text" class="search_input iconfont" placeholder="&#xe602; 搜索" style="font-size: 12px;">
+        <!-- 聊天框 -->
+        <div class="home_content_chat">
+          <div class="chat_profile">
           </div>
-          <!-- 聊天框 -->
-          <div class="tab_page_content_chat">
-            <div class="chat_profile">
-            </div>
-            <div class="chat_content">
-              <div class="chat_content_name">马云</div>
-              <div class="chat_content_text">111</div>
-            </div>
+          <div class="chat_content">
+            <div class="chat_content_name">马云</div>
+            <div class="chat_content_text">111</div>
           </div>
         </div>
       </div>
-      `;
+    </div>
+    `;
   }
 }
 
@@ -89,42 +95,38 @@ class AddressBookPage extends Component {
 
   render() {
     return `
-      <div class="tab_page addressBook_content page_part">
-        <!-- 通讯录页面头部 -->
-        <div class="tab_page_header_wrap">
-            <div class="tab_page_header">
-            <span>通讯录</span>
-            <input type="button" class="iconfont" value="&#xe628;">
-            </div>
+    <!-- 通讯录页面 -->
+    <div class="addressbook_page">
+      <!-- 通讯录页面头部 -->
+      <div class="addressbook_header">
+        <span>通讯录</span>
+        <input type="button" class="iconfont" value="&#xe628;">
+      </div>
+      <div class="fixed_box"></div>
+      <!-- 通讯录页面内容 -->
+      <div class="addressbook_content">
+        <!-- 搜索框 -->
+        <input type="text" class="search_input iconfont" placeholder="&#xe602; 搜索" style="font-size: 12px;">
+        <!-- 功能框 -->
+        <div class="addressbook_item_content">
+          <div class="item_content_img newFriend"></div>
+          <div class="item_content_text">新的朋友</div>
         </div>
-        <!-- 通讯录页面内容 -->
-        <div class="tab_page_content">
-            <!-- 搜索框 -->
-            <div class="tab_page_content_search">
-            <input type="text" class="search_input iconfont" placeholder="&#xe602; 搜索" style="font-size: 12px;">
-            </div>
-            <!-- 功能框 -->
-            <div class="addressBook_item">
-            <div class="addressBook_item_content">
-                <div class="item_content_img newFriend"></div>
-                <div class="item_content_text">新的朋友</div>
-            </div>
-            <div class="addressBook_item_content">
-                <div class="item_content_img group"></div>
-                <div class="item_content_text">群聊</div>
-            </div>
-            <div class="addressBook_item_content">
-                <div class="item_content_img tag"></div>
-                <div class="item_content_text">标签</div>
-            </div>
-            <div class="addressBook_item_content">
-                <div class="item_content_img officialAccount"></div>
-                <div class="item_content_text">公众号</div>
-            </div>
-            </div>
+        <div class="addressbook_item_content">
+          <div class="item_content_img group"></div>
+          <div class="item_content_text">群聊</div>
+        </div>
+        <div class="addressbook_item_content">
+          <div class="item_content_img tag"></div>
+          <div class="item_content_text">标签</div>
+        </div>
+        <div class="addressbook_item_content">
+          <div class="item_content_img officialAccount"></div>
+          <div class="item_content_text">公众号</div>
         </div>
       </div>
-      `;
+    </div>
+    `;
   }
 }
 
@@ -146,26 +148,23 @@ class FindPage extends Component {
   render() {
     return `
     <!-- 发现页面部分 -->
-    <div class="tab_page find_content">
+    <div class="find_page">
       <!-- 发现页面头部 -->
-      <div class="tab_page_header_wrap">
-        <div class="tab_page_header">
-          <span>发现</span>
-        </div>
+      <div class="find_header">
+        <span>发现</span>
       </div>
+      <div class="fixed_box"></div>
       <!-- 发现页面内容 -->
-      <div class="tab_page_content">
-        <div class="find_item">
-          <div class="find_item_content iconfont">
-            <span class="iconfont">&#xe667;</span>
-            <span>朋友圈</span>
-            <span class="iconfont">&#xe612;</span>
-          </div>
-          <div class="find_item_content iconfont">
-            <span class="iconfont">&#xe69e;</span>
-            <span>游戏</span>
-            <span class="iconfont">&#xe612;</span>
-          </div>
+      <div class="find_content">
+        <div class="find_item_content">
+          <span class="iconfont">&#xe667;</span>
+          <span>朋友圈</span>
+          <span class="iconfont">&#xe612;</span>
+        </div>
+        <div class="find_item_content">
+          <span class="iconfont">&#xe69e;</span>
+          <span>游戏</span>
+          <span class="iconfont">&#xe612;</span>
         </div>
       </div>
     </div>
@@ -192,57 +191,64 @@ class MinePage extends Component {
   render() {
     return `
     <!-- 我页面部分 -->
-    <div class="tab_page mine_content">
-        <!-- 我页面头部 -->
-        <div class="tab_page_mine_header">
-            <input type="button" class="top-button iconfont" value="&#xeb48;" style="font-size: 20px;">
+    <div class="mine_page">
+      <!-- 我页面头部 -->
+      <div class="mine_header">
+        <input type="button" class="top-button iconfont" value="&#xeb48;" style="font-size: 20px;">
+      </div>
+      <!-- 我页面内容 -->
+      <!-- 我页面个人部分 -->
+      <div class="mine">
+        <div class="mine_personal">
+          <!-- 我页面个人头像部分 -->
+          <div class="mine_personal_selfie"></div>
+          <!-- 我页面个人资料部分 -->
+          <div class="mine_personal_text">
+            <span>一个pen</span>
+            <span>微信号：123456789</span>
+          </div>
+          <!-- 我页面个人图标部分 -->
+          <div class="mine_personal_img">
+            <span class="iconfont">&#xeb4a;</span>
+            <span class="iconfont">&#xe612;</span>
+          </div>
         </div>
-        <!-- 我页面内容 -->
-        <!-- 我页面个人部分 -->
-        <div class="tab_page_content">
-            <div class="mine_personal_content">
-                <span class="mine_personal_content_Selfie"></span>
-                <span>一个pen</span>
-                <span>微信号：123456789</span>
-                <span class="iconfont">&#xeb4a;</span>
-                <span class="iconfont">&#xe612;</span>
-            </div>
-            <!-- 我页面支付部分 -->
-            <div class="mine_payment_content">
-                <span class="iconfont">&#xe634;</span>
-                <span>支付</span>
-                <span class="iconfont">&#xe612;</span>
-            </div>
-            <!-- 我页面生活部分 -->
-            <div class="mine_life_content">
-            <div class="mine_life_content_item">
-                <span class="iconfont">&#xe60a;</span>
-                <span>收藏</span>
-                <span class="iconfont">&#xe612;</span>
-            </div>
-            <div class="mine_life_content_item">
-                <span class="iconfont">&#xe621;</span>
-                <span>相册</span>
-                <span class="iconfont">&#xe612;</span>
-            </div>
-            <div class="mine_life_content_item">
-                <span class="iconfont">&#xeb49;</span>
-                <span>卡包</span>
-                <span class="iconfont">&#xe612;</span>
-            </div>
-            <div class="mine_life_content_item">
-                <span class="iconfont">&#xe60b;</span>
-                <span>表情</span>
-                <span class="iconfont">&#xe612;</span>
-            </div>
-            </div>
-            <!-- 我页面设置部分 -->
-            <div class="mine_setting_content">
-                <span class="iconfont">&#xe606;</span>
-                <span>设置</span>
-                <span class="iconfont">&#xe612;</span>
-            </div>
+        <!-- 我页面支付部分 -->
+        <div class="mine_payment">
+          <span class="iconfont">&#xe634;</span>
+          <span>支付</span>
+          <span class="iconfont">&#xe612;</span>
         </div>
+        <!-- 我页面生活部分 -->
+        <div class="mine_life">
+          <div class="mine_life_item">
+            <span class="iconfont">&#xe60a;</span>
+            <span>收藏</span>
+            <span class="iconfont">&#xe612;</span>
+          </div>
+          <div class="mine_life_item">
+            <span class="iconfont">&#xe621;</span>
+            <span>相册</span>
+            <span class="iconfont">&#xe612;</span>
+          </div>
+          <div class="mine_life_item">
+            <span class="iconfont">&#xeb49;</span>
+            <span>卡包</span>
+            <span class="iconfont">&#xe612;</span>
+          </div>
+          <div class="mine_life_item">
+            <span class="iconfont">&#xe60b;</span>
+            <span>表情</span>
+            <span class="iconfont">&#xe612;</span>
+          </div>
+        </div>
+        <!-- 我页面设置部分 -->
+        <div class="mine_setting">
+          <span class="iconfont">&#xe606;</span>
+          <span>设置</span>
+          <span class="iconfont">&#xe612;</span>
+        </div>
+      </div>
     </div>
     `;
   }
@@ -267,6 +273,7 @@ class ChatWindow extends Component {
   }
   
   destory() {
+    // this.create().setAttribute('class', 'outSlide')
     this.parent.removeChild(this.parent.lastChild);
   }
 
@@ -281,35 +288,35 @@ class ChatWindow extends Component {
 
   render() {
     return `
-    <div class="chat_part">
-      <div class="chat_top">
-        <input type="button" class="chat_top_backButton top_backButton iconfont" value="&#xe611;" onclick="window.history.go(-1)">
-          马云
-        <input type="button" class="chat_top_moreButton top_moreButton iconfont" value="&#xe627;">
-      </div>
-      <div class="chat_center">
-        <div class="chat_info">
-          <div class="chat_dialog_profile" href="#/home/chatWindow/fdInfo"></div>
-          <div class="chat_dialog_content">
-            <span>你好，很高兴认识你！</span>
-          </div>
-        </div>
-      </div>
-      <div class="chat_bottom">
-        <div class="chat_bottom_item">
-          <input class="iconfont" type="button" value="&#xe805;">
-        </div>
-        <div class="chat_bottom-item chat_bottom_item_text">
-          <input type="text">
-        </div>
-        <div class="chat_bottom_item">
-          <input class="iconfont" type="button" value="&#xe60b;">
-        </div>
-        <div class="chat_bottom_item">
-          <input class="iconfont" type="button" value="&#xe68a;">
-        </div>
-      </div>
-    </div>  
+	<div class="chat_page">
+		<div class="chat_top">
+			<input type="button" class="chat_top_backButton top_backButton iconfont" value="&#xe611;" onclick="window.history.go(-1)">
+				马云
+			<input type="button" class="chat_top_moreButton top_moreButton iconfont" value="&#xe627;">
+		</div>
+		<div class="chat_center">
+			<div class="chat_info">
+				<div class="chat_dialog_profile" href="#/home/chatWindow/fdInfo"></div>
+				<div class="chat_dialog_content">
+					<span>你好，很高兴认识你！</span>
+				</div>
+			</div>
+		</div>
+		<div class="chat_bottom">
+			<div class="chat_bottom_item">
+				<input class="iconfont" type="button" value="&#xe805;">
+			</div>
+			<div class="chat_bottom-item chat_bottom_item_text">
+				<input type="text">
+			</div>
+			<div class="chat_bottom_item">
+				<input class="iconfont" type="button" value="&#xe60b;">
+			</div>
+			<div class="chat_bottom_item">
+				<input class="iconfont" type="button" value="&#xe68a;">
+			</div>
+		</div>
+	</div>  
     `
   }
 }
@@ -333,7 +340,7 @@ class FdInfoPage extends Component {
   }
   
   destory() {
-    this.parent.removeChild(this.parent.lastChild);
+    this.parent.removeChild(this.parent.lastChild)
   }
 
   componentDidMount() {

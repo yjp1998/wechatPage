@@ -1,40 +1,38 @@
 /* 通讯录页面部分 */
-
-/* 通讯录头部 */
-.addressBook_content .tab_page_header {
+.addressbook_page {
   width: 100%;
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
-  background-color: #f5f5f5;
   position: relative;
 }
-.tab_page_header > input {
+
+/* 通讯录头部部分 */
+.addressbook_header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  text-align: center;
+  line-height: 60px;
+  top: 0;
+  z-index: 1;
+}
+.addressbook_header > input {
   position: absolute;
   top: 20px;
   right: 20px;
 }
-/* 功能框部分 */
-.addressBook_item  {
-  display: flex;
-  z-index: 2;
-  flex-direction: column;
-}
-.addressBook_item_content {
+
+/* 通讯录功能框部分 */
+.addressbook_item_content {
   background-color: #fff;
   height: 58px;
   position: relative;
+  display: flex;
 }
 .item_content_img {
   box-sizing: border-box;
-  padding: 5px;
   height: 46px;
   width: 46px;
-  position: absolute;
-  left: 7px;
-  top: 7px;
+  margin: 6px;
   border-radius: 5px;
-  display: inline-block;
 }
 .newFriend {
   background: url('../img/newFriend.png') no-repeat center;
@@ -54,10 +52,8 @@
 }
 .item_content_text {
   box-sizing: border-box;
-  position: absolute;
-  left: 70px;
   height: 58px;
-  width: calc(100% - 70px);
+  width: calc(100% - 58px);
   line-height: 58px;
   text-align: left;
   border-bottom: 1px solid #f6f6f6;

@@ -6,37 +6,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>微信页面</title>
   <title>Document</title>
-  <link rel="stylesheet" href="css/wechatPart.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/minePart.css">
-  <link rel="stylesheet" href="css/findingPart.css">
-  <link rel="stylesheet" href="css/chattingPart.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/addressbook.css">
+  <link rel="stylesheet" href="css/find.css">
+  <link rel="stylesheet" href="css/mine.css">
   <link rel="stylesheet" href="css/bottomTabsPart.css">
-  <link rel="stylesheet" href="css/addressbookPart.css">
-  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/chat.css">
   <link rel="stylesheet" href="css/fdInfo.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/font.css">
+
 </head>
 
 <body>
   <div class="home_container"></div>
-  <div class="tabs_wrap">
-    <div class="tabs">
-      <a class="btn wechat_btn">
-        <span class="iconfont">&#xe65d;</span>
-        <span>微信</span>
-      </a>
-      <a class="btn addressBook_btn">
-        <span class="iconfont">&#xe7d3;</span>
-        <span>通讯录</a>
-      </a>
-      <a class="btn find_btn">
-        <span class="iconfont">&#xe636;</span>
-        <span>发现</span>
-      </a>
-      <a class="btn mine_btn router">
-        <span class="iconfont">&#xe626;</span>
-        <span>我</span>
-      </a>
+  <div class="tabs">
+    <div class="btn wechat_btn">
+      <span class="iconfont">&#xe65d;</span>
+      <span>微信</span>
+    </div>
+    <div class="btn addressBook_btn">
+      <span class="iconfont">&#xe7d3;</span>
+      <span>通讯录</a>
+    </div>
+    <div class="btn find_btn">
+      <span class="iconfont">&#xe636;</span>
+      <span>发现</span>
+    </div>
+    <div class="btn mine_btn router">
+      <span class="iconfont">&#xe626;</span>
+      <span>我</span>
     </div>
   </div>
   <script src="./js/Component.js"></script>
@@ -95,6 +94,7 @@
         this.length--;
       }
     }
+
     let changePage = function () {
       document.querySelector('.wechat_btn').addEventListener('click', () => {
         for (let i = 0; i < document.querySelector('.home_container').childNodes.length; i++) {

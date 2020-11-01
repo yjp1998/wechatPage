@@ -1,0 +1,59 @@
+/* 微信页面部分 */
+.home_page {
+  width: 100%;
+  position: relative;
+}
+
+/* 微信页面头部部分 */
+.home_header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  text-align: center;
+  line-height: 60px;
+  top: 0;
+  z-index: 1;
+}
+.home_header > input {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* 微信页面内容部分 */
+.chat_content {
+  position: relative;
+  display: inline-block;
+}
+
+/* 聊天框 */
+.home_content_chat {
+  position: relative;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+}
+.chat_profile {
+  height: 42px;
+  width: 42px;
+  margin: 9px;
+  border-radius: 4px;
+  display: inline-block;
+  background: url('../img/mayun.jpg') no-repeat center;
+  background-size: cover;
+}
+.chat_content {
+  width: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+}
+.chat_content_name {
+  height: 30px;
+  line-height: 40px;
+  font-size: 15px;
+}
+.chat_content_text {
+  height: 30px;
+  color: #b3b3b3;
+  font-size: 12px;
+}
