@@ -34,9 +34,9 @@ class ChatWindow extends Component {
     return `
     <div class="chat_page">
       <div class="chat_top">
-        <input type="button" class="chat_top_backButton top_backButton iconfont" value="&#xe611;" onclick="window.history.go(-1)">
-          马云
-        <input type="button" class="chat_top_moreButton top_moreButton iconfont" value="&#xe627;">
+        <input type="button" class="chat_top_backButton  iconfont" value="&#xe611;" onclick="window.history.go(-1)">
+        <span class="chat_top_name">马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云</span>
+        <input type="button" class="chat_top_moreButton  iconfont" value="&#xe627;">
       </div>
       <div class="chat_center">
         <div class="chat_info">

@@ -16,18 +16,27 @@
   height: 60px;
   text-align: center;
   line-height: 60px;
+  display: flex;
   background-color: #f5f5f5;
   box-shadow: 0 -1px 1px rgba(100, 100, 100, .1);
   top: 0;
   z-index: 2;
+
 }
 .chat_top_backButton {
   font-size: 20px;
-  top: 22px;
+  margin-left: 10px;
 }
 .chat_top_moreButton {
   font-size: 20px;
-  top: 22px;
+  margin-right: 10px;
+}
+.chat_top_name {
+  flex: 1;
+  margin: 0 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* 聊天页面内容部分 */
@@ -35,7 +44,7 @@
   width: 100%;
   max-height: 900px;
   z-index: 2;
-  overflow-y:scroll;
+  overflow-y: scroll;
   position: fixed;
   top: 60px;
   bottom: 60px;
