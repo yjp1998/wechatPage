@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: flex-start;
   background-color: #ededed;
-  overflow: hidden;
   position: fixed;
   top: 0;
   z-index: 2;
@@ -36,7 +35,10 @@
   width: 100%;
   max-height: 900px;
   z-index: 2;
+  overflow-y:scroll;
   position: fixed;
+  top: 60px;
+  bottom: 60px;
 }
 .chat_info {
   margin: 10px 10px;
@@ -49,12 +51,13 @@
   width: 35px;
   border-radius: 4px;
   display: inline-block;
-  background: url(../img/mayun.jpg) no-repeat center;
+  background: url(../../img/mayun.jpg) no-repeat center;
   background-size: cover;
 }
 .chat_dialog_content {
   margin: -2px 0 0 8px;
   width: auto;
+  max-width: calc(100% - 100px);
   height: auto;
   display: inline-block;
   border-radius: 5px;
@@ -64,8 +67,8 @@
   display: inline-block;
   text-align: left;
   margin: 10px 5px;
-  width: 160px;
-  max-width: 200px;
+  width: auto;
+  word-break:break-word;
 }
 
 
@@ -102,4 +105,7 @@
 .chat_bottom_item > input {
   font-size: 30px;
   line-height: 40px;
+}
+.bottom_wrap {
+  height: 60px;
 }

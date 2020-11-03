@@ -35,11 +35,11 @@ body {
   top: 21px;
   right: 10px;
 }
-.home_container {
+.page_container {
   position: relative;
 }
 /* 页面fixed空间填充 */
-.fixed_box {
+.header_wrap {
   position: relative;
   height: 60px;
 }
@@ -61,3 +61,16 @@ body {
 #green_cover {
   color: green;
 }
+/* 隐藏滚动条 */
+/* .outer_container{
+	overflow: hidden;
+}
+.inner_container{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: -17px;
+	bottom: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+} */

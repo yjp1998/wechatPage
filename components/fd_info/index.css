@@ -33,7 +33,7 @@
   height: 60px;
   border-radius: 5px;
   margin: 0 11px;
-  background: url('../img/mayun.jpg') no-repeat center;
+  background: url('../../img/mayun.jpg') no-repeat center;
   background-size: cover;
 }
 .fd_info_top_introducePart_textIntroduce {
