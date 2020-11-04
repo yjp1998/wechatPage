@@ -13,11 +13,13 @@ class FdInfoPage extends Component {
     const temp = this.renderDOM();
     const div = document.createElement('div');
     div.innerHTML = temp;
+    div.className = 'fd_info_part inSlide';
     return div;
   }
   
   destory() {
-    this.parent.removeChild(this.parent.lastChild)
+    const fd_info_part = document.querySelector('.fd_info_part');
+    this.parent.removeChild(fd_info_part);
   }
 
   componentDidMount() {
@@ -28,11 +30,10 @@ class FdInfoPage extends Component {
 
   render() {
     return `
-    <div class="fd_info_part">
       <div class="fd_info_top">
         <div class="fd_info_top_btnPart" style="border-bottom: none;">
           <input type="button" class="fd_info_top_backButton top_backButton iconfont backChat" value="&#xe611;"
-            style="font-size: 20px;" onclick="window.history.go(-1)">
+            style="font-size: 20px;">
           <input type="button" class="fd_info_top_moreButton top_moreButton iconfont" value="&#xe627;"
             style="font-size: 20px;">
         </div>
@@ -68,7 +69,6 @@ class FdInfoPage extends Component {
           音视频通话
         </div>
       </div>
-    </div>
     `
   }
 }

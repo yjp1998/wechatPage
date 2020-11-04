@@ -9,10 +9,17 @@ class AddressBookPage extends Component {
     this.insert()
   }
 
+  create() {
+    const temp = this.renderDOM();
+    const div = document.createElement('div');
+    div.innerHTML = temp;
+    div.style.display = 'none';
+    div.className = 'addressbook_page'
+    return div;
+  }
+
   render() {
     return `
-    <!-- 通讯录页面 -->
-    <div class="addressbook_page">
       <!-- 通讯录页面头部 -->
       <div class="header_wrap">
         <div class="addressbook_header">
@@ -42,7 +49,6 @@ class AddressBookPage extends Component {
           <div class="item_content_text">公众号</div>
         </div>
       </div>
-    </div>
     `;
   }
 }

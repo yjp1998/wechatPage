@@ -17,10 +17,6 @@ class Component {
     return this.create()
   }
 
-  destory() {
-    this.parent.removeChild();
-  }
-
   renderDOM() {
     return this.render()
   }

@@ -10,14 +10,21 @@ class MinePage extends Component {
     this.componentDidMount();
   }
 
+  create() {
+    const temp = this.renderDOM();
+    const div = document.createElement('div');
+    div.innerHTML = temp;
+    div.className = 'mine_page';
+    div.style.display = 'none'
+    return div;
+  }
+
   componentDidMount() {
 
   }
   
   render() {
     return `
-    <!-- 我页面部分 -->
-    <div class="mine_page">
       <!-- 我页面头部 -->
       <div class="mine_header">
         <input type="button" class="top-button iconfont" value="&#xeb48;" style="font-size: 20px;">
@@ -75,7 +82,6 @@ class MinePage extends Component {
           <span class="iconfont">&#xe612;</span>
         </div>
       </div>
-    </div>
     `;
   }
 }

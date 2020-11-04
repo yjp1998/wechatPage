@@ -13,12 +13,17 @@ class ChatWindow extends Component {
     const temp = this.renderDOM();
     const div = document.createElement('div');
     div.innerHTML = temp;
+    div.className = 'chat_page inSlide'
     return div;
   }
-  
+
+  insert() {
+    this.parent.appendChild(this.create());
+  }
+
   destory() {
-    // this.create().setAttribute('class', 'outSlide')
-    this.parent.removeChild(this.parent.lastChild);
+    const chat_page = document.querySelector('.chat_page');
+    this.parent.removeChild(chat_page);
   }
 
   componentDidMount() {
@@ -32,10 +37,9 @@ class ChatWindow extends Component {
 
   render() {
     return `
-    <div class="chat_page">
       <div class="chat_top">
         <input type="button" class="chat_top_backButton  iconfont" value="&#xe611;" onclick="window.history.go(-1)">
-        <span class="chat_top_name">马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云马云</span>
+        <span class="chat_top_name">马云</span>
         <input type="button" class="chat_top_moreButton  iconfont" value="&#xe627;">
       </div>
       <div class="chat_center">
@@ -60,7 +64,6 @@ class ChatWindow extends Component {
           <input class="iconfont" type="button" value="&#xe68a;">
         </div>
       </div>
-    </div>  
     `
   }
 }

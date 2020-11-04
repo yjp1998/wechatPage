@@ -37,6 +37,7 @@ body {
 }
 .page_container {
   position: relative;
+  padding-bottom: 60px;
 }
 /* 页面fixed空间填充 */
 .header_wrap {

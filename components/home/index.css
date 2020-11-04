@@ -1,7 +1,6 @@
 /* 微信页面部分 */
 .home_page {
   width: 100%;
-  position: relative;
 }
 
 /* 微信页面头部部分 */
@@ -22,40 +21,39 @@
 }
 
 /* 微信页面内容部分 */
-
 /* 聊天框 */
 .home_content_chat {
-  position: relative;
-  height: 60px;
+  height: 44px;
   background-color: #fff;
   display: flex;
+  padding: 8px 8px;
+  border-bottom: 1px solid #ededed;
 }
 .chat_profile {
   height: 42px;
   width: 42px;
-  margin: 9px;
   border-radius: 4px;
-  display: inline-block;
   background: url('../../img/mayun.jpg') no-repeat center;
   background-size: cover;
 }
 .chat_content {
   box-sizing: border-box;
-  width: 260px;
   display: flex;
   flex: 1;
   flex-direction: column;
+  padding-left: 5px;
 }
+
 .chat_content_name {
   height: 30px;
   font-size: 15px;
-  padding-top: 8px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .chat_content_text {
   height: 30px;
+  padding-top: 5px;
   color: #b3b3b3;
   font-size: 12px;
   overflow: hidden;
@@ -63,12 +61,12 @@
   text-overflow: ellipsis;
 }
 .chat_logo {
-  width: 40px;
+  width: 30px;
   font-size: 8px;
   color: #b3b3b3;
 }
 .chat_logo_time {
-  padding-top: 10px;
+
 }
 
 

@@ -1,7 +1,6 @@
 /* 通讯录页面部分 */
 .addressbook_page {
   width: 100%;
-  position: relative;
 }
 
 /* 通讯录头部部分 */
@@ -21,20 +20,16 @@
   right: 20px;
 }
 /* 通讯录内容部分 */
-
-
 /* 通讯录功能框部分 */
 .addressbook_item_content {
   background-color: #fff;
-  height: 58px;
-  position: relative;
   display: flex;
+  padding: 6px;
+  border-bottom: 1px solid #f6f6f6;
 }
 .item_content_img {
-  box-sizing: border-box;
   height: 46px;
   width: 46px;
-  margin: 6px;
   border-radius: 5px;
 }
 .newFriend {
@@ -54,10 +49,9 @@
   background-size: cover;
 }
 .item_content_text {
-  box-sizing: border-box;
-  height: 58px;
-  line-height: 58px;
-  width: calc(100% - 58px);
+  flex: 1;
+  height: 48px;
+  line-height: 48px;
+  margin-left: 4px;
   text-align: left;
-  border-bottom: 1px solid #f6f6f6;
 }

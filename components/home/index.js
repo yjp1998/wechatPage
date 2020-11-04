@@ -9,6 +9,7 @@ class HomePage extends Component {
     const div = document.createElement('div');
     div.innerHTML = temp;
     div.style.display = 'block';
+    div.className = 'home_page'
     document.querySelector('.wechat_btn').style.color = 'green'
     return div;
   }
@@ -27,8 +28,6 @@ class HomePage extends Component {
   
   render() {
     return `
-    <!-- 主页页面部分 -->
-    <div class="home_page">
       <!-- 主页头部 -->
       <div class="header_wrap">
         <div class="home_header">
@@ -54,7 +53,6 @@ class HomePage extends Component {
           </div>
         </div>
       </div>
-    </div>
     `;
   }
 }

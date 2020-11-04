@@ -1,6 +1,5 @@
 /* 我页面部分 */
 .mine_page {
-  position: relative;
   width: 100%;
 }
 
@@ -18,7 +17,6 @@
 /* 我页面内容部分 */
 /* 我页面个人部分 */
 .mine_personal {
-  position: relative;
   height: 80px;
   background-color: #fff;
   display: flex;
@@ -31,7 +29,6 @@
   width: 56px;
   margin: 8px 10px 6px 18px;
   border-radius: 5px;
-  display: inline-block;
   background-image: url('../../img/selfie.jpg');
   background-size: cover;
 }
@@ -43,11 +40,9 @@
   flex-direction: column;
   height: 50px;
 }
-.mine_personal_text > span {
-  flex: 1;
-}
+
 .mine_personal_text > span:first-child {
-  line-height: 38px;
+  margin: auto 0;
 }
 .mine_personal_text > span:nth-child(2) {
   font-size: 12px;
@@ -70,7 +65,6 @@
   border-top: 8px solid #f6f6f6;
   height: 58px;
   line-height: 58px;
-  position: relative;
   display: flex;
 }
 .mine_payment > span:first-child {
@@ -94,7 +88,6 @@
 .mine_life_item {
   height: 58px;
   line-height: 58px;
-  position: relative;
   display: flex;
 }
 .mine_life_item > span:first-child {
@@ -112,7 +105,6 @@
   background-color: #fff;
   height: 58px;
   line-height: 58px;
-  position: relative;
   border-top: 8px solid #f6f6f6;
   display: flex;
 }

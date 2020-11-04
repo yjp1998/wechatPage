@@ -10,13 +10,20 @@ class FindPage extends Component {
     this.componentDidMount();
   }
 
+  create() {
+    const temp = this.renderDOM();
+    const div = document.createElement('div');
+    div.innerHTML = temp;
+    div.className = 'find_page';
+    div.style.display = 'none'
+    return div;
+  }
+
   componentDidMount() {
   }
   
   render() {
     return `
-    <!-- 发现页面部分 -->
-    <div class="find_page">
       <!-- 发现页面头部 -->
       <div class="header_wrap">
         <div class="find_header">
@@ -36,7 +43,6 @@ class FindPage extends Component {
           <span class="iconfont">&#xe612;</span>
         </div>
       </div>
-    </div>
     `;
   }
 }
