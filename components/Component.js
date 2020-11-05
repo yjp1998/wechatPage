@@ -1,7 +1,6 @@
 class Component {
   constructor(parent) {
-    this.parent = document.querySelector('.page_container');
-    this.container = document.querySelector('wechat_content');
+    this.parent = document.querySelector('.index');
   }
 
   create() {

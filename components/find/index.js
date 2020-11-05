@@ -1,6 +1,7 @@
 class FindPage extends Component {
   constructor(props) {
     super(props);
+    this.c
     this.init();
   }
 

@@ -37,7 +37,6 @@ body {
 }
 .page_container {
   position: relative;
-  padding-bottom: 60px;
 }
 /* 页面fixed空间填充 */
 .header_wrap {
@@ -50,28 +49,11 @@ body {
   background-color: white;
   position: relative;
   width: calc(100% - 20px);
-  height: 40px;
-  margin: 4px 10px 10px 10px;
-  border-radius: 8px;
+  height: 25px;
+  margin: 6px 10px 6px 10px;
+  border-radius: 4px;
   text-align: center;
   font-weight: 100;
   box-sizing: border-box;
 }
 
-/* 按钮点击后变绿色 */
-#green_cover {
-  color: green;
-}
-/* 隐藏滚动条 */
-/* .outer_container{
-	overflow: hidden;
-}
-.inner_container{
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: -17px;
-	bottom: 0;
-	overflow-x: hidden;
-	overflow-y: scroll;
-} */

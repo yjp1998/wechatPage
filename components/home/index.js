@@ -3,6 +3,12 @@ class HomePage extends Component {
     super(props);
     this.init();
   }
+  
+  init() {
+    this.create();
+    this.insert();
+    this.componentDidMount();
+  }
 
   create() {
     const temp = this.renderDOM();
@@ -12,12 +18,6 @@ class HomePage extends Component {
     div.className = 'home_page'
     document.querySelector('.wechat_btn').style.color = 'green'
     return div;
-  }
-
-  init() {
-    this.create();
-    this.insert();
-    this.componentDidMount();
   }
 
   componentDidMount() {
@@ -44,15 +44,18 @@ class HomePage extends Component {
           <div class="chat_profile">
           </div>
           <div class="chat_content">
-            <div class="chat_content_name">马云</div>
-            <div class="chat_content_text">111</div>
-          </div>
-          <div class="chat_logo">
-            <div class="chat_logo_time">11:42</div>
-            <div class="chat_logo_notDisturb"></div>
+            <div class="chat_content_up">
+              <div class="chat_content_name">马云</div>
+              <div class="chat_content_time">11:42</div>
+            </div>
+            <div class="chat_content_down">
+              <div class="chat_content_text">111</div>
+              <div class="chat_content_logo"></div>
+            </div>
           </div>
         </div>
       </div>
     `;
   }
 }
+

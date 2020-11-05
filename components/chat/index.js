@@ -1,6 +1,7 @@
 class ChatWindow extends Component {
   constructor(props) {
     super(props);
+    this.parent = document.querySelector('.chatting_page')
     this.init();
   }
   init() {
@@ -10,11 +11,21 @@ class ChatWindow extends Component {
   }
   
   create() {
-    const temp = this.renderDOM();
-    const div = document.createElement('div');
-    div.innerHTML = temp;
-    div.className = 'chat_page inSlide'
-    return div;
+    const fd_info = document.querySelector('.fd_info_part');
+    if(fd_info) {
+      fd_info.parentNode.removeChild(fd_info);
+      const temp = this.renderDOM();
+      const div = document.createElement('div');
+      div.innerHTML = temp;
+      div.className = 'chat_page inSlide'
+      return div;
+    } else {
+      const temp = this.renderDOM();
+      const div = document.createElement('div');
+      div.innerHTML = temp;
+      div.className = 'chat_page inSlide'
+      return div;
+    }
   }
 
   insert() {
@@ -28,7 +39,11 @@ class ChatWindow extends Component {
 
   componentDidMount() {
     document.querySelector('.chat_top_backButton').addEventListener('click', () => {
-      router.back();
+      const chat_page = document.querySelector('.chat_page');
+      chat_page.classList.add('outSlide');
+      chat_page.addEventListener('animationend', () => {
+        router.back();
+      }, false)
     });
     document.querySelector('.chat_dialog_profile').addEventListener('click', () => {
       router.go('FdInfo');

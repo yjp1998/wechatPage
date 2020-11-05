@@ -6,7 +6,7 @@ class AddressBookPage extends Component {
 
   init() {
     this.create();
-    this.insert()
+    this.insert();
   }
 
   create() {

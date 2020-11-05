@@ -21,9 +21,12 @@
 }
 
 /* 微信页面内容部分 */
+.home_content {
+  padding-bottom: 60px;
+}
 /* 聊天框 */
 .home_content_chat {
-  height: 44px;
+  height: 43px;
   background-color: #fff;
   display: flex;
   padding: 8px 8px;
@@ -37,39 +40,40 @@
   background-size: cover;
 }
 .chat_content {
-  box-sizing: border-box;
+  margin-left: 5px;
+  line-height: 21.5px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.chat_content_up {
   display: flex;
   flex: 1;
-  flex-direction: column;
-  padding-left: 5px;
 }
-
+.chat_content_down {
+  display: flex;
+  flex: 1;
+}
 .chat_content_name {
-  height: 30px;
+  flex: 1;
   font-size: 15px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.chat_content_time {
+  font-size: 10px;
+  color: #b3b3b3;
+}
+
 .chat_content_text {
-  height: 30px;
-  padding-top: 5px;
   color: #b3b3b3;
   font-size: 12px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.chat_logo {
-  width: 30px;
-  font-size: 8px;
-  color: #b3b3b3;
-}
-.chat_logo_time {
-
-}
-
-
 
 .home_content_bottom {
   height: 60px;

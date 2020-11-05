@@ -1,6 +1,7 @@
 class FdInfoPage extends Component {
   constructor(props) {
     super(props);
+    this.parent = document.querySelector('.info_page')
     this.init();
   }
   init() {
@@ -16,6 +17,10 @@ class FdInfoPage extends Component {
     div.className = 'fd_info_part inSlide';
     return div;
   }
+
+  insert() {
+    this.parent.appendChild(this.create())
+  }
   
   destory() {
     const fd_info_part = document.querySelector('.fd_info_part');
@@ -24,7 +29,11 @@ class FdInfoPage extends Component {
 
   componentDidMount() {
     document.querySelector('.fd_info_top_backButton').addEventListener('click', () => {
-      router.back();
+      const fd_info_part = document.querySelector('.fd_info_part');
+      fd_info_part.classList.add('outSlide')
+      fd_info_part.addEventListener('animationend', () => {
+        router.back()
+      })
     });
   }
 
