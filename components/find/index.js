@@ -26,10 +26,8 @@ class FindPage extends Component {
   render() {
     return `
       <!-- 发现页面头部 -->
-      <div class="header_wrap">
-        <div class="find_header">
-          <span>发现</span>
-        </div>
+      <div class="find_header">
+        <span>发现</span>
       </div>
       <!-- 发现页面内容 -->
       <div class="find_content">

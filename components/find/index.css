@@ -14,11 +14,16 @@
   z-index: 1;
 }
 /* 发现内容 */
+.find_content {
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
 .find_item_content {
   background-color: #fff;
   height: 60px;
   display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  
 }
 .find_item_content > span {
   font-size: 20px;

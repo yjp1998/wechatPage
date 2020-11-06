@@ -22,7 +22,7 @@ class MinePage extends Component {
   componentDidMount() {
 
   }
-  
+
   render() {
     return `
       <!-- 我页面头部 -->

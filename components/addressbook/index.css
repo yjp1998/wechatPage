@@ -20,6 +20,10 @@
   right: 20px;
 }
 /* 通讯录内容部分 */
+.addressbook_content {
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
 /* 通讯录功能框部分 */
 .addressbook_item_content {
   background-color: #fff;

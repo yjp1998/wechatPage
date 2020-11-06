@@ -21,11 +21,9 @@ class AddressBookPage extends Component {
   render() {
     return `
       <!-- 通讯录页面头部 -->
-      <div class="header_wrap">
-        <div class="addressbook_header">
-          <span>通讯录</span>
-          <input type="button" class="iconfont" value="&#xe628;">
-        </div>
+      <div class="addressbook_header">
+        <span>通讯录</span>
+        <input type="button" class="iconfont" value="&#xe628;">
       </div>
       <!-- 通讯录页面内容 -->
       <div class="addressbook_content">

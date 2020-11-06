@@ -1,7 +1,7 @@
 class ChatWindow extends Component {
   constructor(props) {
     super(props);
-    this.parent = document.querySelector('.chatting_page')
+    this.parent = document.querySelector('.stack_container')
     this.init();
   }
   init() {

@@ -1,7 +1,7 @@
 class FdInfoPage extends Component {
   constructor(props) {
     super(props);
-    this.parent = document.querySelector('.info_page')
+    this.parent = document.querySelector('.stack_container')
     this.init();
   }
   init() {
@@ -32,7 +32,7 @@ class FdInfoPage extends Component {
       const fd_info_part = document.querySelector('.fd_info_part');
       fd_info_part.classList.add('outSlide')
       fd_info_part.addEventListener('animationend', () => {
-        router.back()
+        router.back();
       })
     });
   }

@@ -15,8 +15,8 @@ class HomePage extends Component {
     const div = document.createElement('div');
     div.innerHTML = temp;
     div.style.display = 'block';
-    div.className = 'home_page'
-    document.querySelector('.wechat_btn').style.color = 'green'
+    div.className = 'home_page';
+    document.querySelector('.wechat_btn').style.color = 'green';
     return div;
   }
 
@@ -29,11 +29,9 @@ class HomePage extends Component {
   render() {
     return `
       <!-- 主页头部 -->
-      <div class="header_wrap">
-        <div class="home_header">
-          <span>微信</span>
-          <input type="button" class="iconfont" value="&#xe68a;">
-        </div>
+      <div class="home_header">
+        <span>微信</span>
+        <input type="button" class="iconfont" value="&#xe68a;">
       </div>
       <!-- 主页内容 -->
       <div class="home_content">
