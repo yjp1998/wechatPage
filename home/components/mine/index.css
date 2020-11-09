@@ -29,7 +29,7 @@
   width: 56px;
   margin: 8px 10px 6px 18px;
   border-radius: 5px;
-  background-image: url('../../../img/selfie.jpg');
+  background-image: url('../../../common/img/selfie.jpg');
   background-size: cover;
 }
 

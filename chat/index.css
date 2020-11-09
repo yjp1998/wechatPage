@@ -60,7 +60,7 @@
   width: 35px;
   border-radius: 4px;
   display: inline-block;
-  background: url(../img/mayun.jpg) no-repeat center;
+  background: url('../common/img/mayun.jpg') no-repeat center;
   background-size: cover;
 }
 .chat_dialog_content {
