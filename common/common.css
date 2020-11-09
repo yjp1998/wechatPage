@@ -57,3 +57,10 @@ body {
   box-sizing: border-box;
 }
 
+.defaultNone {
+  display: none;
+}
+
+.defaultBlock {
+  display: block;
+}

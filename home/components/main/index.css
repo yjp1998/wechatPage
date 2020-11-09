@@ -1,0 +1,82 @@
+/* 微信页面部分 */
+.home_page {
+  width: 100%;
+  position: relative;
+}
+
+/* 微信页面头部部分 */
+.home_header {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  text-align: center;
+  line-height: 60px;
+  top: 0;
+  z-index: 1;
+  background-color: #ededed;
+}
+.home_header > input {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* 微信页面内容部分 */
+.home_content {
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+/* 聊天框 */
+.home_content_chat {
+  height: 43px;
+  background-color: #fff;
+  display: flex;
+  padding: 8px 8px;
+  border-bottom: 1px solid #ededed;
+}
+.chat_profile {
+  height: 42px;
+  width: 42px;
+  border-radius: 4px;
+  background: url('../../../img/mayun.jpg') no-repeat center;
+  background-size: cover;
+}
+.chat_content {
+  margin-left: 5px;
+  line-height: 21.5px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.chat_content_up {
+  display: flex;
+  flex: 1;
+}
+.chat_content_down {
+  display: flex;
+  flex: 1;
+}
+.chat_content_name {
+  flex: 1;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.chat_content_time {
+  font-size: 10px;
+  color: #b3b3b3;
+}
+
+.chat_content_text {
+  color: #b3b3b3;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.home_content_bottom {
+  height: 60px;
+}
