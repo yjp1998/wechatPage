@@ -38,7 +38,7 @@
   height: 42px;
   width: 42px;
   border-radius: 4px;
-  background: url('../../../img/mayun.jpg') no-repeat center;
+  background: url('../../../common/img/mayun.jpg') no-repeat center;
   background-size: cover;
 }
 .chat_content {
