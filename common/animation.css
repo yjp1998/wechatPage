@@ -1,19 +1,19 @@
 .inSlide {
-  animation: slide-right 0.5s forwards;
+  animation: slide-right 0.4s forwards;
 }
 
 @keyframes slide-right {
   0% {
-    right: -100%;
+    transform: translateX(100%);
   }
 
   100% {
-    right: 0;
+    transform: translateX(0);
   }
 }
 
 .outSlide {
-  animation: slide-left 0.5s forwards;
+  animation: slide-left 0.4s forwards;
 }
 @keyframes slide-left {
   0% {
@@ -25,4 +25,29 @@
   }
 }
 
+.out {
+  animation: out-left 0.4s;
+}
 
+@keyframes out-left {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.in {
+  animation: in-left 0.4s;
+}
+
+@keyframes in-left {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0;
+  }
+}

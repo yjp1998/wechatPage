@@ -16,6 +16,7 @@ class Home {
     const div = document.createElement('div');
     div.innerHTML = temp;
     div.className = 'tab_pages';
+    div.style.position = 'relative'
     return div;
   }
 
@@ -39,11 +40,17 @@ class Home {
     })
   }
 
+  // 进入聊天窗口
   interChat() {
     document.querySelector('.home_content_chat').addEventListener('click', () => {
+      document.querySelector('.tab_pages').classList.add('out');
       router.go('ChatWindow');
+      document.querySelector('.chat_page').classList.add('inSlide');
+      setTimeout(() => {
+        document.querySelector('.tab_pages').classList.remove('out');
+        document.querySelector('.chat_page').classList.remove('inSlide');
+      }, 500);
     })
-    
   }
 
   render() {

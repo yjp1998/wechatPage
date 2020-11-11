@@ -1,5 +1,5 @@
 class Main {
-  constructor(props) {
+  constructor() {
     this.parent = document.querySelector('.index');
   }
 

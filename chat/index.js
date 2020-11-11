@@ -1,19 +1,20 @@
 class ChatWindow {
   constructor(props) {
-    this.parent = document.querySelector('.stack_container')
+    this.parent = document.querySelector('.stack_container');
     this.init();
   }
   init() {
     this.create();
     this.insert();
-    this.componentDidMount();
+    this.interDetail();
+    this.return();
   }
   
   create() {
     const temp = this.render();
     const div = document.createElement('div');
     div.innerHTML = temp;
-    div.className = 'chat_page inSlide'
+    div.className = 'chat_page'
     return div;
   }
 
@@ -26,16 +27,29 @@ class ChatWindow {
     this.parent.removeChild(chat_page);
   }
 
-  componentDidMount() {
-    document.querySelector('.chat_top_backButton').addEventListener('click', () => {
-      const chat_page = document.querySelector('.chat_page');
-      chat_page.classList.add('outSlide');
-      chat_page.addEventListener('animationend', () => {
-        router.back();
-      }, false)
-    });
+  // 进入好友信息
+  interDetail() {
     document.querySelector('.chat_dialog_profile').addEventListener('click', () => {
+      document.querySelector('.chat_page').classList.add('out');
       router.go('FdInfo');
+      document.querySelector('.fd_info_part').classList.add('inSlide');
+      setTimeout(() => {
+        document.querySelector('.chat_page').classList.remove('out');
+        document.querySelector('.fd_info_part').classList.remove('inSlide');
+      }, 1000);
+    })
+  }
+
+  // 返回上一页
+  return() {
+    document.querySelector('.chat_top_backButton').addEventListener('click', () => {
+      document.querySelector('.chat_page').classList.add('outSlide');
+      document.querySelector('.tab_pages').classList.add('in');
+      document.querySelector('.chat_page').addEventListener('animationend', () => {
+        document.querySelector('.chat_page').classList.remove('outSlide');
+        document.querySelector('.tab_pages').classList.remove('in');
+        router.back()
+      })
     })
   }
 

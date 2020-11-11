@@ -6,14 +6,14 @@ class FdInfoPage {
   init() {
     this.create();
     this.insert();
-    this.componentDidMount();
+    this.return();
   }
   
   create() {
     const temp = this.render();
     const div = document.createElement('div');
     div.innerHTML = temp;
-    div.className = 'fd_info_part inSlide';
+    div.className = 'fd_info_part';
     return div;
   }
 
@@ -26,14 +26,17 @@ class FdInfoPage {
     this.parent.removeChild(fd_info_part);
   }
 
-  componentDidMount() {
+  // 返回上一页
+  return() {
     document.querySelector('.fd_info_top_backButton').addEventListener('click', () => {
-      const fd_info_part = document.querySelector('.fd_info_part');
-      fd_info_part.classList.add('outSlide')
-      fd_info_part.addEventListener('animationend', () => {
-        router.back();
+      document.querySelector('.fd_info_part').classList.add('outSlide');
+      document.querySelector('.chat_page').classList.add('in');
+      document.querySelector('.fd_info_part').addEventListener('animationend', () => {
+        document.querySelector('.fd_info_part').classList.remove('outSlide');
+        document.querySelector('.chat_page').classList.remove('in');
+        router.back()
       })
-    });
+    })
   }
 
   render() {
