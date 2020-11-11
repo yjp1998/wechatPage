@@ -1,18 +1,18 @@
-.inSlide {
+.in_right {
   animation: slide-right 0.4s forwards;
 }
 
 @keyframes slide-right {
   0% {
-    transform: translateX(100%);
+    right: -100%;
   }
 
   100% {
-    transform: translateX(0);
+    right: 0;
   }
 }
 
-.outSlide {
+.out_right {
   animation: slide-left 0.4s forwards;
 }
 @keyframes slide-left {
@@ -25,7 +25,7 @@
   }
 }
 
-.out {
+.out_left {
   animation: out-left 0.4s;
 }
 
@@ -38,7 +38,7 @@
   }
 }
 
-.in {
+.in_left {
   animation: in-left 0.4s;
 }
 

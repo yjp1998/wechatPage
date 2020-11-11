@@ -24,6 +24,7 @@ class Home {
     this.parent.appendChild(this.create())
   }
 
+  // 切换页面
   changePage() {
     const tabs = document.querySelector('.tabs');
     let btns = Array.from(tabs.querySelectorAll('.btn'));
@@ -43,12 +44,12 @@ class Home {
   // 进入聊天窗口
   interChat() {
     document.querySelector('.home_content_chat').addEventListener('click', () => {
-      document.querySelector('.tab_pages').classList.add('out');
+      document.querySelector('.tab_pages').classList.add('out_left');
       router.go('ChatWindow');
-      document.querySelector('.chat_page').classList.add('inSlide');
+      document.querySelector('.chat_page').classList.add('in_right');
       setTimeout(() => {
-        document.querySelector('.tab_pages').classList.remove('out');
-        document.querySelector('.chat_page').classList.remove('inSlide');
+        document.querySelector('.tab_pages').classList.remove('out_left');
+        document.querySelector('.chat_page').classList.remove('in_right');
       }, 500);
     })
   }

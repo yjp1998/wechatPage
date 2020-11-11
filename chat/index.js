@@ -1,5 +1,5 @@
 class ChatWindow {
-  constructor(props) {
+  constructor() {
     this.parent = document.querySelector('.stack_container');
     this.init();
   }
@@ -30,12 +30,12 @@ class ChatWindow {
   // 进入好友信息
   interDetail() {
     document.querySelector('.chat_dialog_profile').addEventListener('click', () => {
-      document.querySelector('.chat_page').classList.add('out');
+      document.querySelector('.chat_page').classList.add('out_left');
       router.go('FdInfo');
-      document.querySelector('.fd_info_part').classList.add('inSlide');
+      document.querySelector('.fd_info_part').classList.add('in_right');
       setTimeout(() => {
-        document.querySelector('.chat_page').classList.remove('out');
-        document.querySelector('.fd_info_part').classList.remove('inSlide');
+        document.querySelector('.chat_page').classList.remove('out_left');
+        document.querySelector('.fd_info_part').classList.remove('in_right');
       }, 1000);
     })
   }
@@ -43,11 +43,11 @@ class ChatWindow {
   // 返回上一页
   return() {
     document.querySelector('.chat_top_backButton').addEventListener('click', () => {
-      document.querySelector('.chat_page').classList.add('outSlide');
-      document.querySelector('.tab_pages').classList.add('in');
+      document.querySelector('.chat_page').classList.add('out_right');
+      document.querySelector('.tab_pages').classList.add('in_left');
       document.querySelector('.chat_page').addEventListener('animationend', () => {
-        document.querySelector('.chat_page').classList.remove('outSlide');
-        document.querySelector('.tab_pages').classList.remove('in');
+        document.querySelector('.chat_page').classList.remove('out_right');
+        document.querySelector('.tab_pages').classList.remove('in_left');
         router.back()
       })
     })

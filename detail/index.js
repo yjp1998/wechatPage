@@ -29,11 +29,11 @@ class FdInfoPage {
   // 返回上一页
   return() {
     document.querySelector('.fd_info_top_backButton').addEventListener('click', () => {
-      document.querySelector('.fd_info_part').classList.add('outSlide');
-      document.querySelector('.chat_page').classList.add('in');
+      document.querySelector('.fd_info_part').classList.add('out_right');
+      document.querySelector('.chat_page').classList.add('in_left');
       document.querySelector('.fd_info_part').addEventListener('animationend', () => {
-        document.querySelector('.fd_info_part').classList.remove('outSlide');
-        document.querySelector('.chat_page').classList.remove('in');
+        document.querySelector('.fd_info_part').classList.remove('out_right');
+        document.querySelector('.chat_page').classList.remove('in_left');
         router.back()
       })
     })

@@ -36,4 +36,4 @@ class Router {
 }
 
 let router = new Router();
-router.go('Home')
+router.go('Home');
