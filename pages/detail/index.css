@@ -1,5 +1,5 @@
 /* 好友信息部分 */
-.fd_info_part {
+.fd_info {
   height: 100%;
   width: 100%;
   background-color: #f6f6f6;
@@ -33,7 +33,7 @@
   height: 60px;
   border-radius: 5px;
   margin: 0 11px;
-  background: url('../common/img/mayun.jpg') no-repeat center;
+  background: url('../../common/img/mayun.jpg') no-repeat center;
   background-size: cover;
 }
 .fd_info_top_introducePart_textIntroduce {

@@ -1,6 +1,7 @@
 class Main {
   constructor() {
     this.parent = document.querySelector('.index');
+    this.render();
   }
 
   render() {

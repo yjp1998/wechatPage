@@ -4,14 +4,14 @@ const config = {
     component: Home,
     page: null
   },
-  ChatWindow: {
-    title: 'chatWindow',
-    component: ChatWindow,
+  Chat: {
+    title: 'chat',
+    component: Chat,
     page: null
   },
   FdInfo: {
     title: 'fdInfo',
-    component: FdInfoPage,
+    component: FdInfo,
     page: null
   }
 }

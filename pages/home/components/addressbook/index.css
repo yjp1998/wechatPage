@@ -37,19 +37,19 @@
   border-radius: 5px;
 }
 .newFriend {
-  background: url('../../../common/img/newFriend.png') no-repeat center;
+  background: url('../../../../common/img/newFriend.png') no-repeat center;
   background-size: cover;
 }
 .group {
-  background: url('../../../common/img/group.png') no-repeat center;
+  background: url('../../../../common/img/group.png') no-repeat center;
   background-size: cover;
 }
 .tag {
-  background: url('../../../common/img/tag.png') no-repeat center;
+  background: url('../../../../common/img/tag.png') no-repeat center;
   background-size: cover;
 }
 .officialAccount {
-  background: url('../../../common/img/officialAccount.png') no-repeat center;
+  background: url('../../../../common/img/officialAccount.png') no-repeat center;
   background-size: cover;
 }
 .item_content_text {

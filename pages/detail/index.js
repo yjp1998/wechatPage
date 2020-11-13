@@ -1,42 +1,13 @@
-class FdInfoPage {
+class FdInfo extends Component {
   constructor() {
-    this.parent = document.querySelector('.stack_container')
+    super();
+    this.name = 'fd_info';
     this.init();
   }
+
   init() {
     this.create();
-    this.insert();
     this.return();
-  }
-  
-  create() {
-    const temp = this.render();
-    const div = document.createElement('div');
-    div.innerHTML = temp;
-    div.className = 'fd_info_part';
-    return div;
-  }
-
-  insert() {
-    this.parent.appendChild(this.create())
-  }
-  
-  destory() {
-    const fd_info_part = document.querySelector('.fd_info_part');
-    this.parent.removeChild(fd_info_part);
-  }
-
-  // 返回上一页
-  return() {
-    document.querySelector('.fd_info_top_backButton').addEventListener('click', () => {
-      document.querySelector('.fd_info_part').classList.add('out_right');
-      document.querySelector('.chat_page').classList.add('in_left');
-      document.querySelector('.fd_info_part').addEventListener('animationend', () => {
-        document.querySelector('.fd_info_part').classList.remove('out_right');
-        document.querySelector('.chat_page').classList.remove('in_left');
-        router.back()
-      })
-    })
   }
 
   render() {

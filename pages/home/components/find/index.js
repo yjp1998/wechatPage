@@ -1,6 +1,7 @@
 class Find {
-  constructor(props) {
-    this.parent = document.querySelector('.index')
+  constructor() {
+    this.parent = document.querySelector('.index');
+    this.render();
   }
 
   render() {

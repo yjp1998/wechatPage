@@ -1,8 +1,8 @@
 class Addressbook {
-  constructor(props) {
-    this.parent = document.querySelector('.index')
+  constructor() {
+    this.parent = document.querySelector('.index');
+    this.render()
   }
-
   render() {
     return `
     <div class="addressbook_page defaultNone">
