@@ -3,25 +3,24 @@ class Chat extends Component {
     super();
     this.name = 'chat';
     this.init();
+    this.back();
   }
 
   init() {
     this.create();
     this.interDetail();
-    this.return();
   }
 
   interDetail() {
     document.querySelector('.chat_dialog_profile').addEventListener('click', () => {
       router.go('FdInfo');
-      this.interAnimation();
     })
   }
 
   render() {
     return `
       <div class="chat_top">
-        <input type="button" class="chat_top_backButton  iconfont" value="&#xe611;" onclick="window.history.go(-1)">
+        <input type="button" class="chat_top_backButton  iconfont" value="&#xe611;">
         <span class="chat_top_name">马云</span>
         <input type="button" class="chat_top_moreButton  iconfont" value="&#xe627;">
       </div>

@@ -24,15 +24,9 @@ class Component {
       }, 1000);
   }
 
-  return() {
+  back() {
     document.querySelector(`.${this.name}_top_backButton`).addEventListener('click', () => {
-      this.div.classList.add('out_right');
-      this.div.previousSibling.classList.add('in_left');
-      this.div.addEventListener('animationend', () => {
-        this.div.classList.remove('out_right');
-        this.div.previousSibling.classList.remove('in_left');
-        router.back()
-      })
+      router.back()
     })
   }
 }

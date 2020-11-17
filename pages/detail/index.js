@@ -3,12 +3,13 @@ class FdInfo extends Component {
     super();
     this.name = 'fd_info';
     this.init();
+    this.back();
   }
 
   init() {
     this.create();
-    this.return();
   }
+
 
   render() {
     return `

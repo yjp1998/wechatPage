@@ -9,7 +9,6 @@ class Home extends Component {
     this.create();
     this.changePage();
     this.interChat();
-    
   }
 
   // 切换页面
@@ -33,7 +32,6 @@ class Home extends Component {
   interChat() {
     document.querySelector('.home_content_chat').addEventListener('click', () => {
       router.go('Chat');
-      this.interAnimation();
     })
   }
 

@@ -24,6 +24,11 @@ body {
   overflow-x: hidden;
   height: 100%;
 }
+
+.stack_container {
+  position: relative;
+}
+
 .top_backButton {
   position: absolute;
   top: 21px;
